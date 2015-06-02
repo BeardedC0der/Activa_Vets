@@ -1,0 +1,13 @@
+---
+first_name: geoff
+last_name: Allman
+roles:
+  - admin
+email: geoff@netnak.co.uk
+password: ""
+_uid: qFpBw3556c80f9b5d72q3238Kl6
+password_hash: $2a$08$d5Na15BJkt9.vo9q0EwZcupPSQZ9sSBxQN9SxEy1RlECj9jABA2lq
+---
+Have no fears, your password, while plain text to start, will be encrypted upon first login. If ever you need to manually reset a password you can wipe out the password fields and start anew.
+
+Your username is the name of the YAML file. That would make this user "admin".

@@ -1,0 +1,14 @@
+title: Events
+
+fields:
+
+  event_date:
+    display: Event date
+    type: date
+
+  venue:
+    display: Venue
+    type: location
+
+  content:
+    type: textarea

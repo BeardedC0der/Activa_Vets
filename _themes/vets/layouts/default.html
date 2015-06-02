@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+		
+		<title>
+			{{ _site_name }}
+			{{ if segment_1 }}
+			– {{ title }}
+			{{ endif }}
+		</title>
+
+		<!-- styles -->
+		{{ theme:css src="style" tag="true" }}
+
+		<!-- favicon -->
+
+	</head>
+	<body>
+		{{ theme:partial src="header" }}
+		
+		{{ layout_content }}
+		
+		{{ theme:partial src="footer" }}
+	</body>
+</html>

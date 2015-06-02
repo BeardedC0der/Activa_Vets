@@ -1,0 +1,36 @@
+<section class="black">
+	<div class="wrap">
+		<div class="layout">
+			<div class="layout__item">
+				<div class="">
+					<h1>Clinical evidence</h1>
+					<nav class="">
+						<select> 
+							<option value="/clinical-evidence/">All</option>
+							{{ taxonomy:listing folder="" type="" }}
+							<option value="{{ url }}">{{ name }}</option>
+							{{ /taxonomy:listing }}
+						</select>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="wrap">
+		<div class="layout">
+			<div class="layout__item">
+				<div class="rule">
+					{{ entries:listing folder="evidence" }}
+						<h2>{{ title }}</h2>
+						{{ content }}
+						<strong>Author:</strong> {{ author }} {{ value }}{{ /author }}<br>
+						<strong>Type:</strong> {{ type_of_evidence }} {{ value }}{{ /type_of_evidence }}<br>
+						<strong>Date:</strong> {{ publish_date }}
+					{{ /entries:listing }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

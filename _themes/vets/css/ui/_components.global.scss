@@ -1,0 +1,43 @@
+html,
+body {
+	overflow-x: hidden;
+	background-color: black;
+}
+
+//body {
+//	font-family: $base-font-family;
+//	line-height: $base-line-height;
+//	font-weight: normal;
+//	background-color: $background;
+//	color: $base-font-color;
+//}
+
+// Wraps
+
+.wrap {
+	width: 95%;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.wrap--header {
+	position: relative;
+	background-color: transparent;
+	border-bottom: 1px solid $rule;
+}
+
+// Major page sections
+
+// Positioning
+
+.t-right {
+	text-align: right;
+}
+
+.t-left {
+	text-align: left;
+}
+
+.t-center {
+	text-align: center;
+}

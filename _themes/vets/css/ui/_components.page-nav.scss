@@ -1,0 +1,18 @@
+.page-nav {
+	ul {
+		text-align: right;
+	}
+	li {
+		display: inline-block;
+		padding: 0.5em 1em;
+	}
+	a {
+		color: white;
+//		@include color-transition;
+		&:hover {
+			text-decoration: none;
+//			color: $orange !important;
+//			@include color-transition;
+		}
+	}
+}

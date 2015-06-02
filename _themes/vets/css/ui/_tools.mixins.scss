@@ -1,0 +1,52 @@
+// Simple transition for text colour and background colour. Mostly used on buttons.
+
+@mixin color-transition {
+	-webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out; 
+	-moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out; 
+	-o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out; 
+	-ms-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out; 
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+// Basic button creation. Pass the mixin and colour variable and tada!
+
+@mixin btn($btn-color) {
+	background-color: $btn-color;
+	-webkit-font-smoothing: antialiased;
+	text-decoration: none;
+	position: relative;
+	border-radius: 1.375em;
+	border: 0 none;
+	padding: 0.666em 3em 0.75em;
+	font-weight: 400;
+	color: white !important;
+	text-align: center;
+	font-size: 1.25em;
+	line-height: 1 !important;
+	white-space: normal;
+	max-width: 20em;
+	margin-bottom: 0.25em;
+	@include color-transition; 
+	&:hover {
+		cursor: pointer;
+		background-color: mix(black, $btn-color, 15%);
+		@include color-transition;
+	}
+}
+
+// Turns visuallyhidden class into a mixin to use in breakpoints.
+
+@mixin visuallyhidden {
+	@extend .visuallyhidden;
+}
+
+// Simple prefixer.
+
+@mixin prefixed($property, $value) {
+    -webkit-#{$property}: $value;
+       -moz-#{$property}: $value;
+        -ms-#{$property}: $value;
+         -o-#{$property}: $value;
+            #{$property}: $value;
+}
+

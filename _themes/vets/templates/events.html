@@ -1,0 +1,41 @@
+<section class="black">
+	<div class="wrap">
+		<div class="layout">
+			<div class="layout__item">
+				<div class="">
+					<h1>Events</h1>
+					<nav class="">
+						<select> 
+							<option value="/events/">All</option>
+							{{ taxonomy:listing folder="" type="" }}
+							<option value="{{ url }}">{{ name }}</option>
+							{{ /taxonomy:listing }}
+						</select>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="wrap">
+		<div class="layout">
+			<div class="layout__item">
+				<div class="rule">
+					{{ entries:listing folder="events" }}
+						<div class="layout">
+							<div class="layout__item  u-1/2-desk">
+								{{ event_date }}
+							</div>
+							<div class="layout__item  u-1/2-desk">
+								{{ title }}
+								{{ content }}
+								<strong>Venue:</strong>
+							</div>
+						</div>
+					{{ /entries:listing }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
