@@ -3,17 +3,17 @@
 $base-font-size:    	16px;
 $base-line-height:  	24px;
 $base-font-color:		#fff;
-//$heading-font-family:	;
-//$base-font-family:		;
+$heading-font-family:	'proxima-nova';
+$base-font-family:		'proxima-nova';
 
 body {
-//	font-family: $base-font-family;
+	font-family: $base-font-family;
 	color: white;
 }
 
 h1,h2,h3,h4,h5,h6 {
-//	font-family: $heading-font-family;
+	font-family: $heading-font-family;
 	color: white;
-	font-weight: 600;
+	font-weight: 100;
 	line-height: 1.3;
 }

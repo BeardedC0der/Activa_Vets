@@ -2,7 +2,7 @@
 	<div class="wrap">
 		<div class="layout">
 			<div class="layout__item">
-				<div class="">
+				<div class="t-center  u-mb++-desk">
 					<h1>Events</h1>
 					<nav class="">
 						<select> 
@@ -25,12 +25,12 @@
 					{{ entries:listing folder="events" }}
 						<div class="layout">
 							<div class="layout__item  u-1/2-desk">
-								{{ event_date }}
+								<h2>{{ event_date }}</h2>
 							</div>
 							<div class="layout__item  u-1/2-desk">
 								{{ title }}
 								{{ content }}
-								<strong>Venue:</strong>
+								<strong>Venue:</strong> {{ venue:name }}
 							</div>
 						</div>
 					{{ /entries:listing }}
