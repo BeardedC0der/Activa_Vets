@@ -1,0 +1,33 @@
+<section id="" class="solid--black">
+	<div class="wrap">
+		<div class="layout">
+			<div class="layout__item  u-1/2-desk">
+				{{ entries:listing folder="products" }}
+				<h1>{{ title }}<br><span>{{ subtitle }}</span></h1>
+				{{ content }}
+				{{ /entries:listing }}
+			</div>
+			<div class="layout__item u-1/2-desk">
+				<img src="{{ feature_image }}" title="" alt="">
+			</div>
+		</div>
+	</div>
+</section>
+<section id="" class="fade">
+	<div class="wrap">
+		<div class="layout">
+			<div class="layout__item  t-center  u-mb">
+				<h3>How it works</h3>
+			</div>
+			<div class="layout__item  u-mb+">
+				<div class="js-flickity">
+					{{ entries:listing folder="products" }}
+					{{ slider_images }}
+						<img src="{{ value }}" title="" alt="">
+					{{ /slider_images }}
+					{{ /entries:listing }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

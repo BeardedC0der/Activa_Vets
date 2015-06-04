@@ -1,0 +1,24 @@
+title: Products
+
+fields:
+
+  subtitle:
+    display: Subtitle
+    type: text
+
+  feature_image:
+    display: Feature Image
+    type: file
+    destination: assets/img/featured/
+    browse: true
+    allowed: [jpg, png]
+
+  slider_images:
+    display: Slider Images
+    type: file
+    destination: assets/img/
+    browse: true
+    allowed: [jpg, png]
+
+  content:
+    type: redactor
