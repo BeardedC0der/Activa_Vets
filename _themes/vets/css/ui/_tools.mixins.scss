@@ -15,16 +15,15 @@
 	-webkit-font-smoothing: antialiased;
 	text-decoration: none;
 	position: relative;
-	border-radius: 1.375em;
 	border: 0 none;
-	padding: 0.666em 3em 0.75em;
+	padding: 0.725em;
 	font-weight: 400;
 	color: white !important;
 	text-align: center;
 	font-size: 1.25em;
 	line-height: 1 !important;
 	white-space: normal;
-	max-width: 20em;
+	max-width: 31.25em;
 	margin-bottom: 0.25em;
 	@include color-transition; 
 	&:hover {

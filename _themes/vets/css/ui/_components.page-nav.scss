@@ -48,12 +48,13 @@ Mobile Nav
 	display: block;
 	position: absolute;
 	overflow: hidden;
-	background-color: black;
+	background-color: transparent;
 	margin: 0;
 	padding: 0;
 	width: 60px;
 	height: 60px;
 	right: 10px;
+	top: 10px;
 	font-size: 0;
 	text-indent: -9999px;
 	-webkit-appearance: none;

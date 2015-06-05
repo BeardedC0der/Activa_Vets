@@ -1,0 +1,15 @@
+.tab {
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+@include media-query(desk) {
+	.tab {
+		li {
+			display: inline-block;
+		}
+	}
+}

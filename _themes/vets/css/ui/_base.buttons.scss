@@ -1,1 +1,16 @@
 // Custom button definition. Calling button mixin.
+
+.btn--reversed {
+	@include btn(transparent);
+	border: solid 1px white;
+	width: 100%;
+//	&:hover {
+//		background-color: $grey;
+//	}
+}
+
+@include media-query(desk) {
+	.btn--reversed {
+		max-width: 20.25em;
+	}
+}

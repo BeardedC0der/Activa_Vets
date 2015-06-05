@@ -23,10 +23,20 @@ body {
 .wrap--header {
 	position: relative;
 	background-color: transparent;
-	border-bottom: 1px solid $rule;
+	height: 5em;
+	border-bottom: 1px solid $light-grey;
 }
 
 // Major page sections
+
+.solid {
+	padding: 1em;
+}
+
+.section--grey {
+	@extend .solid;
+	background-color: $dark-grey;
+}
 
 // Positioning
 
