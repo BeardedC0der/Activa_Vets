@@ -899,10 +899,28 @@ Mobile Nav
   margin: 0;
   padding: 0;
   list-style-type: none; }
+  .tab li {
+    border-top: 2px solid #666666; }
 
 @media screen and (min-width: 64em) {
   .tab li {
-    display: inline-block; } }
+    display: inline-block;
+    padding: 1.5em;
+    border-top: 0; } }
+table {
+  width: 100%; }
+  table tr {
+    border-bottom: 1px solid #666666; }
+  table td {
+    padding: 1em 0px; }
+    table td span {
+      display: block;
+      width: 10px;
+      height: 10px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 50%; }
+
 /*------------------------------------*\
     #CLEARFIX
 \*------------------------------------*/
