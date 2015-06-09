@@ -15,3 +15,24 @@ table {
 	}
 	}
 }
+
+.desktop {
+	display: none;
+}
+
+.mobile {
+	display: table;
+	
+	tr td {
+		padding: 0.725em 0;
+	}
+}
+
+@include media-query(desk) {
+	.desktop {
+		display: table;
+	}
+	.mobile {
+		display: none;
+	}
+}

@@ -12,6 +12,10 @@ body {
 //	color: $base-font-color;
 //}
 
+.visuallyhidden {
+	@include visuallyhidden;
+}
+
 // Wraps
 
 .wrap {
@@ -51,3 +55,10 @@ body {
 .t-center {
 	text-align: center;
 }
+
+.test {
+	td {
+		display: block;
+	}
+}
+

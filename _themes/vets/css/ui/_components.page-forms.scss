@@ -1,0 +1,23 @@
+input {
+	padding: 1em;
+	background-color: transparent;
+	border: 1px solid $light-grey;
+	color: $light-grey;
+	margin-bottom: 1.5em;
+	width: 100%;
+}
+
+textarea {
+	@extend input;
+	height: auto;
+	min-height: 20em;
+	overflow: hidden;
+}
+
+
+@include media-query(desk) {
+	input {
+		display: block;
+		float: left;
+	}
+}
