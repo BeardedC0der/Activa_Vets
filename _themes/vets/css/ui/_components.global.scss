@@ -16,6 +16,10 @@ body {
 	@include visuallyhidden;
 }
 
+.logo {
+	margin: 1em;
+}
+
 // Wraps
 
 .wrap {
@@ -27,11 +31,45 @@ body {
 .wrap--header {
 	position: relative;
 	background-color: transparent;
-	height: 5em;
+	height: 7em;
 	border-bottom: 1px solid $light-grey;
 }
 
 // Major page sections
+
+.home__heading {
+	padding-bottom: 7em;
+	position: relative;
+	&::after {
+		content: "";
+		display: block;
+		background: url(/assets/img/arrow.png) no-repeat;
+		position: absolute;
+		top: 200px;
+		height: 54px;
+		width: 100px;
+		left: 50%;
+		right: -25px;
+	}
+	h1 {
+		font-size: 3.25em;
+		span {
+			position: absolute;
+			top: 300px;
+		}
+	}
+}
+
+.site-header {
+	position: relative;
+	z-index: 20;
+}
+
+.header-img--horse {
+	position: relative;
+	top: -140px;
+	z-index: 10;
+}
 
 .solid {
 	padding: 1em;
@@ -41,6 +79,40 @@ body {
 	@extend .solid;
 	background-color: $dark-grey;
 }
+
+#about {
+	background: rgba(128,111,97,1);
+	background: -moz-linear-gradient(top, rgba(128,111,97,1) 0%, rgba(128,111,97,1) 48%, rgba(10,10,10,1) 50%, rgba(0,0,0,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(128,111,97,1)), color-stop(48%, rgba(128,111,97,1)), color-stop(50%, rgba(10,10,10,1)), color-stop(100%, rgba(0,0,0,1)));
+	background: -webkit-linear-gradient(top, rgba(128,111,97,1) 0%, rgba(128,111,97,1) 48%, rgba(10,10,10,1) 50%, rgba(0,0,0,1) 100%);
+	background: -o-linear-gradient(top, rgba(128,111,97,1) 0%, rgba(128,111,97,1) 48%, rgba(10,10,10,1) 50%, rgba(0,0,0,1) 100%);
+	background: -ms-linear-gradient(top, rgba(128,111,97,1) 0%, rgba(128,111,97,1) 48%, rgba(10,10,10,1) 50%, rgba(0,0,0,1) 100%);
+	background: linear-gradient(to bottom, rgba(128,111,97,1) 0%, rgba(128,111,97,1) 48%, rgba(10,10,10,1) 50%, rgba(0,0,0,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#806f61', endColorstr='#000000', GradientType=0 );
+	position: relative;
+	z-index: 200;
+	height: 100%;
+	width: 100%;
+//	&::before {
+//		content: "";
+//		display: block;
+//		background: url(/assets/img/horses.jpg) no-repeat center bottom;
+//		-webkit-background-size: 100%;
+//		-moz-background-size: 100%;
+//		-o-background-size: 100%;
+//		background-size: 100%;
+//		height: 100%;
+//		width: 100%;
+//		position: absolute;
+//		z-index: 0;
+//		top: -344px;
+//	}
+}
+
+
+
+
+
 
 // Positioning
 

@@ -5,6 +5,10 @@ Page Nav
 -----------*/
 
 .page-nav {
+	position: absolute;
+	right: 1em;
+	top: 2.235em;
+	height: 2em;
 	display: none;
 	ul {
 		text-align: right;
@@ -105,3 +109,4 @@ Mobile Nav
 		display: none;
 	}
 }
+

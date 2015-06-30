@@ -4,6 +4,22 @@
 // Settings
 
 @import "bower_components/inuit-defaults/settings.defaults";
+
+$breakpoints: (
+   "palm"              "screen and (max-width: 24.9375em)",
+   "phablet"           "screen and (min-width: 25em) and (max-width: 44.9375em)",
+   "phablet-and-up"    "screen and (min-width: 25em)",
+   "mobile"            "screen and (max-width: 44.9375em)",
+   "tablet"            "screen and (min-width: 45em) and (max-width: 71.9375em)",
+   "tablet-and-up"     "screen and (min-width: 45em)",
+   "lap"               "screen and (min-width: 72em) and (max-width: 89.9375em)",
+   "lap-and-up"        "screen and (min-width: 72em)",
+   "portable"          "screen and (max-width: 71.9375em)",
+   "desk"              "screen and (min-width: 90em)",
+   "desk-wide"         "screen and (min-width: 120em)",
+   "retina"            "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)"
+);
+
 @import "bower_components/inuit-responsive-settings/settings.responsive";
 
 @import "ui/settings.global";
@@ -59,6 +75,7 @@ $inuit-enable-layout--right:   	true;
 @import "ui/components.page-tabs";
 @import "ui/components.page-table";
 @import "ui/components.page-forms";
+@import "ui/components.page-about";
 
 
 // Trumps
@@ -114,6 +131,12 @@ $inuit-enable-responsive-paddings--huge:            true;
 $inuit-enable-responsive-paddings--none:            true;
 
 @import "bower_components/inuit-spacing-responsive/trumps.spacing-responsive";
+
+
+
+
+
+
 
 
 
