@@ -37,39 +37,12 @@ body {
 
 // Major page sections
 
-.home__heading {
-	padding-bottom: 7em;
-	position: relative;
-	&::after {
-		content: "";
-		display: block;
-		background: url(/assets/img/arrow.png) no-repeat;
-		position: absolute;
-		top: 200px;
-		height: 54px;
-		width: 100px;
-		left: 50%;
-		right: -25px;
-	}
-	h1 {
-		font-size: 3.25em;
-		span {
-			position: absolute;
-			top: 300px;
-		}
-	}
-}
-
 .site-header {
 	position: relative;
 	z-index: 20;
 }
 
-.header-img--horse {
-	position: relative;
-	top: -140px;
-	z-index: 10;
-}
+
 
 .solid {
 	padding: 1em;

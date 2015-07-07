@@ -76,6 +76,8 @@ $inuit-enable-layout--right:   	true;
 @import "ui/components.page-table";
 @import "ui/components.page-forms";
 @import "ui/components.page-about";
+@import "ui/components.page-home";
+
 
 
 // Trumps
@@ -131,10 +133,6 @@ $inuit-enable-responsive-paddings--huge:            true;
 $inuit-enable-responsive-paddings--none:            true;
 
 @import "bower_components/inuit-spacing-responsive/trumps.spacing-responsive";
-
-
-
-
 
 
 
