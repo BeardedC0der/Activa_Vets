@@ -1,0 +1,25 @@
+.section--grey {
+	@extend .solid;
+	background-color: $dark-grey;
+}
+
+.section {
+// 	set up padding
+}
+
+.section--pseudo-img {
+	position: relative;
+	z-index: 1;
+	height: 750px;
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		display: block;
+		
+	}
+}
+
+.section--product-preview {
+	position: relative;
+}

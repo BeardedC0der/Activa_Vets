@@ -50,6 +50,8 @@ $breakpoints: (
 @import "bower_components/inuit-images/base.images";
 @import "ui/base.typography";
 @import "ui/base.buttons";
+@import "ui/base.sections";
+
 
 // Objects
 
@@ -77,6 +79,7 @@ $inuit-enable-layout--right:   	true;
 @import "ui/components.page-forms";
 @import "ui/components.page-about";
 @import "ui/components.page-home";
+@import "ui/components.page-hero";
 
 
 

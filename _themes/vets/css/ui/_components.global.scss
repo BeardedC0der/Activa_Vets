@@ -48,10 +48,6 @@ body {
 	padding: 1em;
 }
 
-.section--grey {
-	@extend .solid;
-	background-color: $dark-grey;
-}
 
 #about {
 	background: rgba(128,111,97,1);
