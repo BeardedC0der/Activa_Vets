@@ -1,10 +1,11 @@
 input {
-	padding: 1em;
+	padding: 0.875em 0.75em;
 	background-color: transparent;
 	border: 1px solid $light-grey;
 	color: $light-grey;
-	margin-bottom: 1.5em;
+	margin-bottom: 0.5em;
 	width: 100%;
+	font-size: 1.5em;
 }
 
 textarea {

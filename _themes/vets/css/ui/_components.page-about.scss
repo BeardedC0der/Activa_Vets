@@ -1,0 +1,76 @@
+.about {
+	position: relative;
+	background: url(/assets/img/horses.jpg) no-repeat left bottom;
+	background-size: 120%;
+	background-color: #8A705F;
+	margin-bottom: 3em;
+}
+
+.about-intro {
+	text-align: center;
+	h2 {
+		&:after {
+			content: "";
+			display: block;
+			width: 4em;
+			height: 2px;
+			background-color: white;
+			margin: 1em auto;
+		}
+	}
+	p {
+		margin-bottom: 2em;
+	}
+	button {
+		padding: 1em 1.3em;
+		font-size: 1.5em;
+	}
+}
+
+@include media-query(tablet-and-up) {
+	.about-intro {
+		button {
+			padding: 0.5em;
+			width: 20em;
+		}
+	}
+}
+
+@include media-query(lap-and-up) {
+	.about-intro {
+		h2 {
+			padding: 0 5em;
+		}
+		p {
+			padding: 0 7em;
+		}
+	}
+}
+
+.where-to-order {
+	text-align: center;
+	h2{
+		margin-bottom: 0.125em;
+	}
+	a {
+		text-decoration: underline;
+		font-size: 1.5em;
+	}
+	p {
+		padding: 0;
+		margin: 0;
+	}
+	h3 {
+		margin: 0;
+	}
+	.order-subheading {
+		font-size: 1.5em;
+		color: $light-grey;
+		margin-bottom: 2em;
+		font-weight: 600;
+	}
+}
+
+.contact-info {
+	margin-bottom: 3em;
+}
