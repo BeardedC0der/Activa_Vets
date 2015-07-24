@@ -1,33 +1,41 @@
 .section--woundcare-for-animals {
+	position: relative;
 	h1 {
-		padding: 0 0 1em 0.5em;
-		position: relative;
+		position: absolute;
 		z-index: 40;
-		max-width: 65%;
+		max-width: 60%;
+		left: 0;
+		top: 0;
+		padding: 0.75rem;
 	}
 	.hero--subheading {
+		position: absolute;
 		right: 0;
+		bottom: 1rem;
 		text-align: right;
-		padding: 3em 1em 2em 0;
-		margin: 0 0 0 5em;
-		max-width: 80%;
+		padding-right: 0.5em;
+		font-size: 1.7rem;
+		max-width: 58%;
 	}
+	// Horse
 	&:before {
-		background: url(/assets/img/horse--mobile.jpg) no-repeat center center;
+		background: url(/assets/img/black-horse.jpg) no-repeat center center;
 		background-size: cover;
-		height: 280px;
-		width: 180px;
+		height: 340px;
+		width: 150px;
+		position: absolute;
+		bottom: 0;
 		z-index: -1;
-		top: 230px;
-		left: -50px;
+		left: 0px;
 	}
+	// DogCat
 	&:after {
 		background: url(/assets/img/dog-cat.jpg) no-repeat center center;
 		background-size: cover;
 		height: 280px;
 		width: 180px;
 		z-index: -1;
-		right: 0;
+		right: -20px;
 		top: -30px;
 	}
 }
@@ -35,59 +43,120 @@
 @include media-query(phablet-and-up) {
 	.section--woundcare-for-animals {
 		h1 {
-			max-width: 55%;
+			max-width: 59%;
+			font-size: 2.5rem;
+			padding: 0 0 0 0.75em;
 		}
 		.hero--subheading {
+			padding-right: 0.75em;
+			max-width: 57%;
+			bottom: 2rem;
 		}
+		// Horse
 		&:before {
-			height: 320px;
-			width: 220px;
+			height: 325px;
+			width: 195px;
 		}
+		// DogCat
 		&:after {
-			height: 360px;
-			width: 260px;
+			height: 315px;
+			width: 225px;
 		}
 	}
 }
 
 @include media-query(tablet-and-up) {
 	.section--woundcare-for-animals {
-		padding-top: 1.5em;
+		height: 675px;
 		h1 {
-			Max-width: 55%;
+			Max-width: 67%;
+			font-size: 3.2rem;
 		}
+		.hero--subheading {
+			max-width: 50%;
+			font-size: 2.3em;
+		}
+		// Horse
 		&:before {
-			height: 320px;
-			width: 220px;
+			height: 470px;
+			width: 288px;
 		}
+		// DogCat
 		&:after {
-			height: 480px;
-			width: 380px;
+			height: 440px;
+			width: 340px;
 		}
 	}
 }
 
 @include media-query(lap-and-up) {
 	.section--woundcare-for-animals {
-		padding-top: 3em;
 		h1 {
+			position: static;
 			text-align: center;
-			margin: 0 auto;
+			margin: 0 auto 2em;
 			padding: 1em 0;
+			&:after {
+				content: "";
+				display: inline-block;
+				height: 27px;
+				width: 50px;
+				left: 50%;
+				margin-left: -25px;
+				background: url(/assets/img/down.png) no-repeat;
+				position: absolute;
+				top: 4.2em;
+			}
 		}
 		.hero--subheading {
+			position: static;
 			text-align: center;
 			margin: 0 auto;
 			padding: 1em 0;
 			max-width: 18em;
 		}
+		// Horse
 		&:before {
-			height: 600px;
-			width: 300px;
+			height: 900px;
+			width: 500px;
+			top: -15em;
+			left: -8em;
 		}
+		// DogCat
 		&:after {
 			height: 460px;
 			width: 360px;
+		}
+	}
+}
+
+@include media-query(desk) {
+	.section--woundcare-for-animals {
+		h1 {
+			padding: 0.5em 0;
+			font-size: 4.5rem;
+			max-width: 45%;
+		}
+		.hero--subheading {
+			position: static;
+			text-align: center;
+			margin: 0 auto;
+			padding: 1em 0;
+			max-width: 16em;
+			font-size: 2.7rem;
+		}
+		// Horse
+		&:before {
+			height: 1000px;
+			width: 600px;
+			top: -11em;
+			left: -9em;
+		}
+		// DogCat
+		&:after {
+			height: 650px;
+			width: 500px;
+			top: -2em;
 		}
 	}
 }

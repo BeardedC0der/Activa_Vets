@@ -1152,72 +1152,122 @@ textarea {
 .contact-info {
   margin-bottom: 3em; }
 
-.section--woundcare-for-animals h1 {
-  padding: 0 0 1em 0.5em;
-  position: relative;
-  z-index: 40;
-  max-width: 65%; }
-.section--woundcare-for-animals .hero--subheading {
-  right: 0;
-  text-align: right;
-  padding: 3em 1em 2em 0;
-  margin: 0 0 0 5em;
-  max-width: 80%; }
-.section--woundcare-for-animals:before {
-  background: url(/assets/img/horse--mobile.jpg) no-repeat center center;
-  background-size: cover;
-  height: 280px;
-  width: 180px;
-  z-index: -1;
-  top: 230px;
-  left: -50px; }
-.section--woundcare-for-animals:after {
-  background: url(/assets/img/dog-cat.jpg) no-repeat center center;
-  background-size: cover;
-  height: 280px;
-  width: 180px;
-  z-index: -1;
-  right: 0;
-  top: -30px; }
+.section--woundcare-for-animals {
+  position: relative; }
+  .section--woundcare-for-animals h1 {
+    position: absolute;
+    z-index: 40;
+    max-width: 60%;
+    left: 0;
+    top: 0;
+    padding: 0.75rem; }
+  .section--woundcare-for-animals .hero--subheading {
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+    text-align: right;
+    padding-right: 0.5em;
+    font-size: 1.7rem;
+    max-width: 58%; }
+  .section--woundcare-for-animals:before {
+    background: url(/assets/img/black-horse.jpg) no-repeat center center;
+    background-size: cover;
+    height: 340px;
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    left: 0px; }
+  .section--woundcare-for-animals:after {
+    background: url(/assets/img/dog-cat.jpg) no-repeat center center;
+    background-size: cover;
+    height: 280px;
+    width: 180px;
+    z-index: -1;
+    right: -20px;
+    top: -30px; }
 
 @media screen and (min-width: 25em) {
   .section--woundcare-for-animals h1 {
-    max-width: 55%; }
+    max-width: 59%;
+    font-size: 2.5rem;
+    padding: 0 0 0 0.75em; }
+  .section--woundcare-for-animals .hero--subheading {
+    padding-right: 0.75em;
+    max-width: 57%;
+    bottom: 2rem; }
   .section--woundcare-for-animals:before {
-    height: 320px;
-    width: 220px; }
+    height: 325px;
+    width: 195px; }
   .section--woundcare-for-animals:after {
-    height: 360px;
-    width: 260px; } }
+    height: 315px;
+    width: 225px; } }
 @media screen and (min-width: 45em) {
   .section--woundcare-for-animals {
-    padding-top: 1.5em; }
+    height: 675px; }
     .section--woundcare-for-animals h1 {
-      Max-width: 55%; }
-    .section--woundcare-for-animals:before {
-      height: 320px;
-      width: 220px; }
-    .section--woundcare-for-animals:after {
-      height: 480px;
-      width: 380px; } }
-@media screen and (min-width: 72em) {
-  .section--woundcare-for-animals {
-    padding-top: 3em; }
-    .section--woundcare-for-animals h1 {
-      text-align: center;
-      margin: 0 auto;
-      padding: 1em 0; }
+      Max-width: 67%;
+      font-size: 3.2rem; }
     .section--woundcare-for-animals .hero--subheading {
-      text-align: center;
-      margin: 0 auto;
-      padding: 1em 0;
-      max-width: 18em; }
+      max-width: 50%;
+      font-size: 2.3em; }
     .section--woundcare-for-animals:before {
-      height: 600px;
-      width: 300px; }
+      height: 470px;
+      width: 288px; }
     .section--woundcare-for-animals:after {
-      height: 460px;
-      width: 360px; } }
+      height: 440px;
+      width: 340px; } }
+@media screen and (min-width: 72em) {
+  .section--woundcare-for-animals h1 {
+    position: static;
+    text-align: center;
+    margin: 0 auto 2em;
+    padding: 1em 0; }
+    .section--woundcare-for-animals h1:after {
+      content: "";
+      display: inline-block;
+      height: 27px;
+      width: 50px;
+      left: 50%;
+      margin-left: -25px;
+      background: url(/assets/img/down.png) no-repeat;
+      position: absolute;
+      top: 4.2em; }
+  .section--woundcare-for-animals .hero--subheading {
+    position: static;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1em 0;
+    max-width: 18em; }
+  .section--woundcare-for-animals:before {
+    height: 900px;
+    width: 500px;
+    top: -15em;
+    left: -8em; }
+  .section--woundcare-for-animals:after {
+    height: 460px;
+    width: 360px; } }
+@media screen and (min-width: 90em) {
+  .section--woundcare-for-animals h1 {
+    padding: 0.5em 0;
+    font-size: 4.5rem;
+    max-width: 45%; }
+  .section--woundcare-for-animals .hero--subheading {
+    position: static;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1em 0;
+    max-width: 16em;
+    font-size: 2.7rem; }
+  .section--woundcare-for-animals:before {
+    height: 1000px;
+    width: 600px;
+    top: -11em;
+    left: -9em; }
+  .section--woundcare-for-animals:after {
+    height: 650px;
+    width: 500px;
+    top: -2em; } }
 .contact {
   text-align: center; }
   .contact h1 {
