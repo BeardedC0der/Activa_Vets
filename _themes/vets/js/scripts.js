@@ -5,6 +5,12 @@ $(document).ready(function () {
 	
 });
 
+$('#toggle').click(function() {
+   $(this).toggleClass('active');
+   $('body').toggleClass('active');
+   $('#overlay').toggleClass('open');
+  });
+
 function navtoggle() {
 	$('.nav-toggle').click(function() {
 		$('.site-nav, .nav-toggle, body').toggleClass('site-nav--visible');

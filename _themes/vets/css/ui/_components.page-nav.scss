@@ -28,154 +28,115 @@ Page Nav
 	}
 }
 
-@include media-query(desk) {
-	.page-nav {
-		display: block;
-	}
+.button_container {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translatey(-13px);
+  height: $button-height;
+  width: $button-width;
+  z-index: 100;
+  cursor: pointer; 
+  &:hover {
+    opacity: .7;
+  }
+  
+  &.active {
+    .top {
+      background: $color-active;
+      transform: translatex(0px) translatey(11px) rotate(45deg);
+    }
+    .middle {
+      opacity: 0;
+      background-color: $color-active;
+    }
+    .bottom {
+      background: $color-active;
+      transform: translatex(0px) translatey(-11px) rotate(-45deg)
+    }
+  }
+  span {
+    height: 5px;
+    width: 100%;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    transition: all 0.35s ease;
+    cursor: pointer;
+    &:nth-of-type(2) {
+      top: 11px;
+    }
+    &:nth-of-type(3) {
+      top: 22px;
+    }
+  }
 }
 
-/*---------
+.overlay {
+  position: fixed;
+  background-color: black;
+  width: 100%;
+  height: 0%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+  
+  &.open {
+    opacity: 0.9;
+    visibility: visible;
+    height: 100%;
+    li {
+      animation: fadeInRight .5s ease forwards;
+      animation-delay: .35s;
+      &:nth-of-type(2) {
+        animation-delay: .4s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: .45s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: .50s;
+      }
+    }
+  }
+  nav {
+    position: relative;
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-weight: 400;
 
-Mobile Nav
-
------------*/
-
-//.mobile-nav {
-//	display: block;
-//	
-//	ul {
-//		display: none;
-//	}
-//}
-//
-//.toggle {
-//	display: block;
-//	position: absolute;
-//	overflow: hidden;
-//	background-color: transparent;
-//	margin: 0;
-//	padding: 0;
-//	width: 60px;
-//	height: 60px;
-//	right: 10px;
-//	top: 10px;
-//	font-size: 0;
-//	text-indent: -9999px;
-//	-webkit-appearance: none;
-//	   -moz-appearance: none;
-//	        appearance: none;
-//	box-shadow: none;
-//	border-radius: none;
-//	border: none;
-//	cursor: pointer;
-//	-webkit-transition: background 0.3s;
-//			transition: background 0.3s;
-//	}
-//
-//	.toggle:focus {
-//	  outline: none;
-//	}
-//
-//.toggle span {
-//	display: block;
-//	position: absolute;
-//	height: 4px;
-//	top: 27px;
-//	left: 10px;
-//	right: 10px;
-//	background: white;
-//
-//	&:before,
-//	&:after {
-//		display: block;
-//		content: "";
-//		height: 4px;
-//		position: absolute;
-//		width: 100%;
-//		background-color: white;
-//	}
-//	
-//	&:before {
-//		top: -12px;
-//	}
-//	
-//	&:after {
-//		bottom: -12px;
-//	}
-//}
-//
-//@include media-query(desk) {
-//	.mobile-nav {
-//		display: none;
-//	}
-//}
-
-.nav-toggle {
-	display: block;
-	height: 1.5em;
-	font-family: $heading-font-family;
-	font-size: 1em;
-	padding-right: 1.5em;
-	text-transform: uppercase;
-	color: white;
-	position: absolute;
-	cursor: pointer;
-	z-index: 200;
-	right: 0;
-	top: 2em;
-	height: 2.25em;
-	width: 2em;
-	&:active,
-	&:focus {
-		@include prefixed (outline,0);
-		@include prefixed (outline-style,none);
-	}
-	.nav-toggle__label {
-		@include visuallyhidden;
-	}
-	.nav-toggle__icon {
-		display: block;
-		background-color: white;
-		width: 32px;
-		height: 4px;
-		position: absolute;
-		right: 1em;
-		top: 1em;
-//		@include all-transition;
-		&:before,
-		&:after {
-//			@include all-transition;
-			content: "";
-			display: block;
-			background-color: white;
-			width: 32px;
-			height: 4px;
-			position: absolute;
-		}
-		&:before {
-			top: -8px;
-		}
-		&:after {
-			top: 8px;
-		}
-	}
-	&:hover {
-		color: white;
-	}
-	&.site-nav--visible {
-		.nav-toggle__icon {
-//			@include all-transition;
-			@include prefixed (transform,rotate(45deg));
-			&:before {
-//				@include all-transition;
-				top: 0;
-				@include prefixed (transform,rotate(-90deg));
-			}
-			&:after {
-//			@include all-transition;
-				opacity: 0;
-			}
-		}
-	}
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    li {
+      display: block;
+      height: 25%;
+      height: calc(100%/4);
+      position: relative;
+      opacity: 1;
+      min-height: 50px;
+      a {
+        color: $color-link;
+      }
+    }
+  }
 }
 
+body {
+	&.active {
+		height: 100vh;
+		overflow-y: hidden;
+	}
+}
