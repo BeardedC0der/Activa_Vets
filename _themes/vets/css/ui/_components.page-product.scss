@@ -1,0 +1,39 @@
+.debrisoft-hero {
+	position: relative;
+	padding: 2rem;
+	h1 {
+		font-size: 3.2rem;
+		margin-bottom: 0;
+	}
+
+	img {
+		top: -20px;
+	}
+}
+
+.equine-section,
+.canine-section {
+	margin: 0 auto;
+	text-align: center;
+	img {
+		border-radius: 50%;
+	}
+	h2 {
+		margin-bottom: 1em;
+	}
+	p {
+		padding: 0 1.2em;
+	}
+}
+
+.section-image {
+	display: none;
+	height: 0px;
+}
+
+@include media-query(tablet-and-up) {
+	.section-image {
+		display: block;
+		height: 100%;
+	}
+}

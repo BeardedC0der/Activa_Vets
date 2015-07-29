@@ -4,7 +4,7 @@ Page Nav
 
 -----------*/
 
-.page-nav {
+.desktop--nav {
 	position: absolute;
 	right: 1em;
 	top: 2.235em;
@@ -28,11 +28,18 @@ Page Nav
 	}
 }
 
+@include media-query(lap-and-up) {
+	.desktop--nav {
+		display: block;
+	}
+}
+
 .button_container {
   position: absolute;
   top: 50%;
-  right: 2%;
-  transform: translatey(-13px);
+  right: 5%;
+  @include prefixed(transform, translateY(-13px));
+  transform: translateY(-13px);
   height: $button-height;
   width: $button-width;
   z-index: 100;
@@ -44,7 +51,8 @@ Page Nav
   &.active {
     .top {
       background: $color-active;
-      transform: translatex(0px) translatey(11px) rotate(45deg);
+	  -webkit-transform: translateX(0px) translateY(11px) rotate(45deg);
+	  transform:  translateX(0px) translateY(11px) rotate(45deg);
     }
     .middle {
       opacity: 0;
@@ -52,7 +60,8 @@ Page Nav
     }
     .bottom {
       background: $color-active;
-      transform: translatex(0px) translatey(-11px) rotate(-45deg)
+      -webkit-transform: translateX(0px) translateY(-11px) rotate(-45deg);
+	  transform:  translateX(0px) translateY(-11px) rotate(-45deg);
     }
   }
   span {
@@ -74,6 +83,12 @@ Page Nav
   }
 }
 
+@include media-query(lap-and-up) {
+	.button_container {
+		display: none;
+	}
+}
+
 .overlay {
   position: fixed;
   background-color: black;
@@ -87,7 +102,7 @@ Page Nav
   overflow: hidden;
   
   &.open {
-    opacity: 0.9;
+    opacity: 1;
     visibility: visible;
     height: 100%;
     li {
@@ -108,9 +123,10 @@ Page Nav
     position: relative;
     height: 70%;
     top: 50%;
+    @include prefixed(transform, translateY(-50%));
     transform: translateY(-50%);
     text-align: center;
-    font-weight: 400;
+    font-size: 1.5em;
 
   }
   ul {
@@ -120,15 +136,21 @@ Page Nav
     display: inline-block;
     position: relative;
     height: 100%;
+    width: 100%;
     li {
       display: block;
-      height: 25%;
-      height: calc(100%/4);
+      height: 10%;
       position: relative;
       opacity: 1;
       min-height: 50px;
+      &:hover {
+	      background-color: $light-grey;
+      }
       a {
         color: $color-link;
+        font-weight: 600;
+        position: relative;
+        top: 25%;
       }
     }
   }

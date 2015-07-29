@@ -1,0 +1,23 @@
+.graph-mobile {
+	visibility: visible;
+	height: 100%;
+}
+
+@include media-query(tablet-and-up) {
+	.graph-mobile {
+		visibility: hidden;
+		height: 0;
+	}
+}
+
+.graph-desk {
+	visibility: hidden;
+	height: 0;
+}
+
+@include media-query(tablet-and-up) {
+	.graph-desk {
+		visibility: visible;
+		height: 100%;
+	}
+}
