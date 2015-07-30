@@ -29,7 +29,8 @@ body {
 }
 
 .wrap--header {
-	position: relative;
+	position: fixed;
+	width: 100%;
 	background-color: transparent;
 	height: 7em;
 	border-bottom: 1px solid $light-grey;
