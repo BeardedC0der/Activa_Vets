@@ -121,8 +121,9 @@
 			margin-bottom: 3em;
 		}
 		img {
-			border-radius: 50%;
 			width: 300px;
+			height: 300px;
+			border-radius: 50%;
 		}
 	}
 	.section-three--img {
@@ -138,7 +139,19 @@
 	}
 	.section-three .comparison {
 		display: inline-block;
-		margin-left: 3em;
+		margin: 0 1.5em 0 1.5em;
+	}
+	.section-three .section-three--content {
+		max-width: 70%;
+		margin: 0 auto;
+	}
+}
+
+@include media-query(lap-and-up) {
+	.section-three .section-three--content {
+		text-align: left;
+		margin: 0;
+		max-width: 70%;
 	}
 }
 

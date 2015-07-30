@@ -1440,8 +1440,9 @@ textarea {
       color: #4D4D4D;
       margin-bottom: 3em; }
     .section-three .comparison img {
-      border-radius: 50%;
-      width: 300px; }
+      width: 300px;
+      height: 300px;
+      border-radius: 50%; }
   .section-three .section-three--img {
     display: none;
     height: 0; }
@@ -1453,7 +1454,16 @@ textarea {
 
   .section-three .comparison {
     display: inline-block;
-    margin-left: 3em; } }
+    margin: 0 1.5em 0 1.5em; }
+
+  .section-three .section-three--content {
+    max-width: 70%;
+    margin: 0 auto; } }
+@media screen and (min-width: 72em) {
+  .section-three .section-three--content {
+    text-align: left;
+    margin: 0;
+    max-width: 70%; } }
 /*
 .btn-centered {
 	text-align: center;
