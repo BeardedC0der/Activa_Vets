@@ -11,6 +11,7 @@
 // Basic button creation. Pass the mixin and colour variable and tada!
 
 @mixin btn($btn-color) {
+	display: inline-block;
 	background-color: $btn-color;
 	-webkit-font-smoothing: antialiased;
 	text-decoration: none;

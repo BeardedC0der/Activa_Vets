@@ -61,12 +61,13 @@ $inuit-enable-layout--rev:      true;
 $inuit-enable-layout--center:   true;
 $inuit-enable-layout--right:   	true;
 
+
 @import "bower_components/inuit-layout/objects.layout";
 @import "bower_components/inuit-media/objects.media";
 @import "bower_components/inuit-list-bare/objects.list-bare";
 @import "bower_components/inuit-list-inline/objects.list-inline";
 
-
+$inuit-enable-layout--flush:	true;
 
 // Components
 
@@ -78,11 +79,11 @@ $inuit-enable-layout--right:   	true;
 @import "ui/components.page-table";
 @import "ui/components.page-forms";
 @import "ui/components.page-about";
-@import "ui/components.page-home";
 @import "ui/components.page-hero";
 @import "ui/components.page-contact";
 @import "ui/components.page-graphs";
 @import "ui/components.page-product";
+@import "ui/components.page-where-to-order";
 
 
 // Trumps

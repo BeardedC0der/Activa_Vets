@@ -1,0 +1,36 @@
+.where-to-order {
+	text-align: center;
+	h2 {
+		font-size: 2.7em;
+		margin-bottom: 0.125em;
+	}
+	.order-subheading {
+		font-size: 1.5em;
+		color: $light-grey;
+		margin-bottom: 2em;
+		font-weight: 600;
+	}
+	.order--info {
+		text-align: center;
+		margin-bottom: 4em;
+		padding: 1.5em 0;
+		h3 {
+			margin: 0;
+			font-size: 1.5rem;
+			font-weight: 600;
+		}
+		p {
+			font-weight: 100;
+			margin-bottom: 0;
+		}
+		a {
+			text-decoration: underline;
+			font-size: 1.5em;
+		}
+	}
+	@include media-query(lap-and-up) {
+		.order--info {
+			border-right: 1px solid $light-grey;
+		}
+	}
+}
