@@ -1,3 +1,43 @@
+.order-codes {
+	text-align: center;
+	padding: 3em;
+	h2 {
+		margin-bottom: 2em;
+	}
+	table {
+		margin-bottom: 3em;
+	}
+}
+
+.order-codes--desk {
+	display: none;
+}
+@include media-query(tablet-and-up) {
+	.order-codes--desk {
+		display: inline-table;
+	}
+}
+
+.order-codes--mobile {
+	display: block;
+	text-align: left;
+	border-top: 1px solid $light-grey;
+	border-bottom: 1px solid $light-grey;
+	padding: 1.5em 0;
+	p {
+		&:nth-of-type(4) {
+			margin-bottom: 0;
+		}
+	}
+
+}
+
+@include media-query(tablet-and-up) {
+	.order-codes--mobile {
+		display: none;
+	}
+}
+
 .where-to-order {
 	text-align: center;
 	h2 {

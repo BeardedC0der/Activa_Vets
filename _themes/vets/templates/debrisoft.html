@@ -123,10 +123,9 @@
 	<div class="wrap">
 		<div class="layout">
 			<div class="layout__item">
-				<div class="t-center">
+				<div class="order-codes">
 					<h2>Order codes</h2>
-				</div>
-					<table>
+					<table class="order-codes--desk">
 						<tbody>
 							<tr class="t-center">
 								<td></td>
@@ -142,11 +141,15 @@
 							</tr>
 						</tbody>
 					</table>
+					<div class="order-codes--mobile">
+						<p><strong>10x10cm &#40;5 pack&#41;</strong></p>
+						<p>NVS Code: 764516</p>
+						<p>Pioneer Code: K070</p>
+						<p>DMS Code: 343-4370</p>
+					</div>
 				</div>
-			<div class="where-to-order">
-				{{ theme:partial src="where_to_order" }}
 			</div>
+			{{ theme:partial src="where_to_order" }}
 		</div>
 	</div>
 </section>
-

@@ -1578,6 +1578,37 @@ textarea {
     top: -14em; }
     .section-four .section-four--content {
       padding-left: 10em; } }
+/* Flivasorb */
+.fliv-content {
+  margin: 0 auto;
+  text-align: center; }
+
+.order-codes {
+  text-align: center;
+  padding: 3em; }
+  .order-codes h2 {
+    margin-bottom: 2em; }
+  .order-codes table {
+    margin-bottom: 3em; }
+
+.order-codes--desk {
+  display: none; }
+
+@media screen and (min-width: 45em) {
+  .order-codes--desk {
+    display: inline-table; } }
+.order-codes--mobile {
+  display: block;
+  text-align: left;
+  border-top: 1px solid #4D4D4D;
+  border-bottom: 1px solid #4D4D4D;
+  padding: 1.5em 0; }
+  .order-codes--mobile p:nth-of-type(4) {
+    margin-bottom: 0; }
+
+@media screen and (min-width: 45em) {
+  .order-codes--mobile {
+    display: none; } }
 .where-to-order {
   text-align: center; }
   .where-to-order h2 {

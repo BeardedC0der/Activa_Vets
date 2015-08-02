@@ -7,6 +7,9 @@
 routes:
 
 	/products/debrisoft: debrisoft
+	/products/flivasorb: flivasorb
+	/products/suprasorb: suprasorb
+	/products/actiformcool: actiformcool
 
 ignore:
   # - success
