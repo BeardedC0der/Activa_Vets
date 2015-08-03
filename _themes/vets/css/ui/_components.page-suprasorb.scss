@@ -1,0 +1,34 @@
+.suprasorb-hero {
+	position: relative;
+	background: url(/assets/img/suprasorb/Suprasorb-A+Ag.png) no-repeat center top;
+	background-size: 90%;
+	.suprasorb-content {
+		padding-top: 80%;
+	}
+}
+
+@include media-query(lap-and-up) {
+	.suprasorb-hero {
+		background: url(/assets/img/suprasorb/Suprasorb-A+Ag.png) no-repeat center right;
+		background-position: 115% 45%;
+		.suprasorb-content {
+			padding-top: 10%;
+		}
+	}
+}
+
+@include media-query(desk) {
+	.suprasorb-hero {
+		background: url(/assets/img/suprasorb/Suprasorb-A+Ag.png) no-repeat center right;
+		background-position: 110% 45%;
+		background-size: 40%;
+	}
+}
+
+.suprasorb-slider {
+	text-align: center;
+	height: 800px;
+	h2 {
+		padding: 1.5em 0 0.5em;
+	}
+}

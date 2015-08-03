@@ -6,6 +6,25 @@ input {
 	margin-bottom: 0.5em;
 	width: 100%;
 	font-size: 1.5em;
+	&::-webkit-input-placeholder {
+	  color: $light-grey;
+	  font-weight: 400;
+	}
+	
+	&:-moz-placeholder { /* Firefox 18- */
+	  color: $light-grey;
+	  font-weight: 400;
+	}
+	
+	&::-moz-placeholder {  /* Firefox 19+ */
+	  color: $light-grey;
+	  font-weight: 400;  
+	}
+	
+	&:-ms-input-placeholder {  
+	  color: $light-grey;
+	  font-weight: 400;  
+	}
 }
 
 textarea {
@@ -18,7 +37,6 @@ textarea {
 
 @include media-query(desk) {
 	input {
-		display: block;
-		float: left;
+		display: inline-block;
 	}
 }

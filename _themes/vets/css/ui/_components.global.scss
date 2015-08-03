@@ -16,32 +16,18 @@ body {
 	@include visuallyhidden;
 }
 
-.logo {
-	margin: 1em;
-}
 
 // Wraps
 
 .wrap {
 	width: 95%;
-	max-width: 1024px;
+	max-width: 100em;
 	margin: 0 auto;
 }
 
-.wrap--header {
-	position: fixed;
-	width: 100%;
-	background-color: transparent;
-	height: 7em;
-	border-bottom: 1px solid $light-grey;
-}
+
 
 // Major page sections
-
-.site-header {
-	position: relative;
-	z-index: 20;
-}
 
 
 

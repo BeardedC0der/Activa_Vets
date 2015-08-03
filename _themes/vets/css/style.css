@@ -588,6 +588,10 @@ body {
   font-family: "proxima-nova";
   color: white; }
 
+.text-negative {
+  font-size: 1.2rem;
+  color: #808080; }
+
 p {
   font-size: 1.5rem; }
 
@@ -718,6 +722,38 @@ a {
 @media screen and (min-width: 90em) {
   .section--horses-paddock {
     padding: 3.5em 2.2em 80em; } }
+/* Section suprasorb */
+.section--suprasorb {
+  padding: 3.5em 2.2em 22em; }
+
+@media screen and (min-width: 25em) {
+  .section--suprasorb {
+    padding: 3.5em 2.2em 6em; } }
+@media screen and (min-width: 45em) {
+  .section--suprasorb {
+    padding: 0 2.2em 6em; } }
+@media screen and (min-width: 72em) {
+  .section--suprasorb {
+    padding: 0 5.2em 6em; } }
+@media screen and (min-width: 90em) {
+  .section--suprasorb {
+    padding: 0 8.6em 6em; } }
+/* Section suprasorb */
+.section--actiform {
+  padding: 3.5em 2.2em 22em; }
+
+@media screen and (min-width: 25em) {
+  .section--actiform {
+    padding: 3.5em 2.2em 6em; } }
+@media screen and (min-width: 45em) {
+  .section--actiform {
+    padding: 0 2.2em 6em; } }
+@media screen and (min-width: 72em) {
+  .section--actiform {
+    padding: 0 5.2em 6em; } }
+@media screen and (min-width: 90em) {
+  .section--actiform {
+    padding: 0 8.6em 6em; } }
 .section--pseudo-img {
   position: relative;
   z-index: 1;
@@ -923,24 +959,10 @@ body {
   position: absolute;
   width: 1px; }
 
-.logo {
-  margin: 1em; }
-
 .wrap {
   width: 95%;
-  max-width: 1024px;
+  max-width: 100em;
   margin: 0 auto; }
-
-.wrap--header {
-  position: fixed;
-  width: 100%;
-  background-color: transparent;
-  height: 7em;
-  border-bottom: 1px solid #4D4D4D; }
-
-.site-header {
-  position: relative;
-  z-index: 20; }
 
 .solid, .section--grey {
   padding: 1em; }
@@ -957,8 +979,22 @@ body {
 .test td {
   display: block; }
 
-/* Nav toggle */
-/* Main nav */
+.logo {
+  margin: 1em;
+  position: relative;
+  z-index: 400; }
+
+.wrap--header {
+  position: fixed;
+  width: 100%;
+  background-color: black;
+  height: 7em;
+  border-bottom: 1px solid #4D4D4D; }
+
+.site-header {
+  position: relative;
+  z-index: 20; }
+
 /*---------
 
 Page Nav
@@ -1077,7 +1113,10 @@ Page Nav
       height: 10%;
       position: relative;
       opacity: 1;
-      min-height: 50px; }
+      min-height: 50px;
+      border-bottom: 1px solid #4D4D4D; }
+      .overlay ul li:first-of-type {
+        border-top: 1px solid #4D4D4D; }
       .overlay ul li:hover {
         background-color: #4D4D4D; }
       .overlay ul li a {
@@ -1109,7 +1148,7 @@ table {
   table tr {
     border-bottom: 1px solid #4D4D4D; }
   table td {
-    padding: 1em 0px; }
+    padding: 1.5em 0px; }
     table td span {
       display: block;
       width: 10px;
@@ -1140,6 +1179,20 @@ input, textarea {
   margin-bottom: 0.5em;
   width: 100%;
   font-size: 1.5em; }
+  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #4D4D4D;
+    font-weight: 400; }
+  input:-moz-placeholder, textarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: #4D4D4D;
+    font-weight: 400; }
+  input::-moz-placeholder, textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #4D4D4D;
+    font-weight: 400; }
+  input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: #4D4D4D;
+    font-weight: 400; }
 
 textarea {
   height: auto;
@@ -1148,11 +1201,10 @@ textarea {
 
 @media screen and (min-width: 90em) {
   input, textarea {
-    display: block;
-    float: left; } }
+    display: inline-block; } }
 .about {
   position: relative;
-  background: url(/assets/img/horses.jpg) no-repeat left bottom;
+  background: url(/assets/img/horses-2.jpg) no-repeat left bottom;
   background-size: 120%;
   background-color: #8A705F;
   margin-bottom: 3em; }
@@ -1183,6 +1235,10 @@ textarea {
     padding: 0 7em; } }
 .contact-info {
   margin-bottom: 3em; }
+
+.site-wrap {
+  position: relative;
+  top: 7em; }
 
 .section--woundcare-for-animals {
   position: relative; }
@@ -1238,7 +1294,7 @@ textarea {
   .section--woundcare-for-animals {
     height: 675px; }
     .section--woundcare-for-animals h1 {
-      Max-width: 50%;
+      max-width: 50%;
       font-size: 3.2rem; }
     .section--woundcare-for-animals .hero--subheading {
       max-width: 50%;
@@ -1264,7 +1320,7 @@ textarea {
       margin-left: -25px;
       background: url(/assets/img/down.png) no-repeat;
       position: absolute;
-      top: 5.1em; }
+      top: 4.7em; }
   .section--woundcare-for-animals .hero--subheading {
     position: static;
     text-align: center;
@@ -1283,7 +1339,8 @@ textarea {
   .section--woundcare-for-animals h1 {
     padding: 0.5em 0;
     font-size: 4.5rem;
-    max-width: 45%; }
+    max-width: 47%;
+    position: relative; }
   .section--woundcare-for-animals .hero--subheading {
     position: static;
     text-align: center;
@@ -1302,12 +1359,6 @@ textarea {
     top: -2em; } }
 .contact {
   text-align: center; }
-  .contact h1 {
-    font-size: 2.875em;
-    margin-bottom: 1em; }
-
-.contact--desc {
-  margin-bottom: 2em; }
 
 .contact--method {
   text-align: left;
@@ -1578,11 +1629,71 @@ textarea {
     top: -14em; }
     .section-four .section-four--content {
       padding-left: 10em; } }
-/* Flivasorb */
-.fliv-content {
-  margin: 0 auto;
-  text-align: center; }
+.suprasorb-hero {
+  position: relative;
+  background: url(/assets/img/suprasorb/Suprasorb-A+Ag.png) no-repeat center top;
+  background-size: 90%; }
+  .suprasorb-hero .suprasorb-content {
+    padding-top: 80%; }
 
+@media screen and (min-width: 72em) {
+  .suprasorb-hero {
+    background: url(/assets/img/suprasorb/Suprasorb-A+Ag.png) no-repeat center right;
+    background-position: 115% 45%; }
+    .suprasorb-hero .suprasorb-content {
+      padding-top: 10%; } }
+@media screen and (min-width: 90em) {
+  .suprasorb-hero {
+    background: url(/assets/img/suprasorb/Suprasorb-A+Ag.png) no-repeat center right;
+    background-position: 110% 45%;
+    background-size: 40%; } }
+.suprasorb-slider {
+  text-align: center;
+  height: 800px; }
+  .suprasorb-slider h2 {
+    padding: 1.5em 0 0.5em; }
+
+.actiform-hero {
+  position: relative;
+  background: url(/assets/img/actiformcool/actiformcool.png) no-repeat center top;
+  background-size: 90%; }
+  .actiform-hero .actiform-content {
+    padding-top: 90%; }
+
+@media screen and (min-width: 72em) {
+  .actiform-hero {
+    background-position: 115% 0%;
+    background-size: 56%; }
+    .actiform-hero .actiform-content {
+      padding-top: 10%; } }
+@media screen and (min-width: 90em) {
+  .actiform-hero {
+    background-position: 110% 45%;
+    background-size: 37%; } }
+.actiform-slider {
+  text-align: center;
+  height: 800px;
+  margin: 0 auto;
+  padding: 2em; }
+
+@media screen and (min-width: 45em) {
+  .actiform-slider {
+    padding: 3em 8em; } }
+@media screen and (min-width: 72em) {
+  .actiform-slider {
+    padding: 3em 4em; } }
+@media screen and (min-width: 90em) {
+  .actiform-slider {
+    padding: 3em 14em; }
+    .actiform-slider h2 {
+      padding: 1.5em 1em 0.5em; } }
+/*
+	.actiform-slider--content {
+		padding: 0 10em;
+		margin-bottom: 4em;
+		
+	}
+*/
 .order-codes {
   text-align: center;
   padding: 3em; }
@@ -1621,7 +1732,7 @@ textarea {
     font-weight: 600; }
   .where-to-order .order--info {
     text-align: center;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
     padding: 1.5em 0; }
     .where-to-order .order--info h3 {
       margin: 0;
@@ -1634,8 +1745,11 @@ textarea {
       text-decoration: underline;
       font-size: 1.5em; }
   @media screen and (min-width: 72em) {
-    .where-to-order .order--info {
+    .where-to-order .order--info:nth-of-type(-n+3) {
       border-right: 1px solid #4D4D4D; } }
+
+.uses-for-activa-vetinary .sources p {
+  margin-bottom: 0; }
 
 /*------------------------------------*\
     #CLEARFIX

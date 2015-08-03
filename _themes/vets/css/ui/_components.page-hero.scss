@@ -1,3 +1,8 @@
+.site-wrap {
+	position: relative;
+	top: 7em;
+}
+
 .section--woundcare-for-animals {
 	position: relative;
 	h1 {
@@ -69,7 +74,7 @@
 	.section--woundcare-for-animals {
 		height: 675px;
 		h1 {
-			Max-width: 50%;
+			max-width: 50%;
 			font-size: 3.2rem;
 		}
 		.hero--subheading {
@@ -105,7 +110,7 @@
 				margin-left: -25px;
 				background: url(/assets/img/down.png) no-repeat;
 				position: absolute;
-				top: 5.1em;
+				top: 4.7em;
 			}
 		}
 		.hero--subheading {
@@ -135,7 +140,8 @@
 		h1 {
 			padding: 0.5em 0;
 			font-size: 4.5rem;
-			max-width: 45%;
+			max-width: 47%;
+			position: relative;
 		}
 		.hero--subheading {
 			position: static;
