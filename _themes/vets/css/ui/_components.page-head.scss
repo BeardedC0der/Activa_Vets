@@ -146,7 +146,6 @@ Page Nav
     @include prefixed(transform, translateY(-50%));
     transform: translateY(-50%);
     text-align: center;
-    font-size: 1.5em;
 
   }
   ul {
@@ -172,7 +171,6 @@ Page Nav
       }
       a {
         color: $color-link;
-        font-weight: 600;
         position: relative;
         top: 25%;
       }

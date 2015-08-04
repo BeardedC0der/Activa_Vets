@@ -4,14 +4,6 @@ body {
 	background-color: black;
 }
 
-//body {
-//	font-family: $base-font-family;
-//	line-height: $base-line-height;
-//	font-weight: normal;
-//	background-color: $background;
-//	color: $base-font-color;
-//}
-
 .visuallyhidden {
 	@include visuallyhidden;
 }
@@ -24,7 +16,6 @@ body {
 	max-width: 100em;
 	margin: 0 auto;
 }
-
 
 
 // Major page sections
@@ -49,10 +40,3 @@ body {
 .t-center {
 	text-align: center;
 }
-
-.test {
-	td {
-		display: block;
-	}
-}
-

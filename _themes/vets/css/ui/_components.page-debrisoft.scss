@@ -14,7 +14,6 @@
 		position: relative;
 		padding: 3.2em;
 		h1 {
-			font-size: 3.2em;
 			margin-bottom: 0;
 		}
 	}
@@ -33,12 +32,6 @@
 	.section-hero .section-hero--content {
 		top: 7.6em;
 		padding: 3.2em 0 3.2em 3.2em;
-		h1 {
-			font-size: 4.2em;
-		}
-		h2 {
-			font-size: 2.9rem;
-		}
 		p {
 			max-width: 80%;
 		}
@@ -93,9 +86,6 @@
 @include media-query(desk) {
 	.section-two .section-two--content {
 		padding: 3.2em 3.2em 0 8em;
-		h2 {
-			font-size: 2.9em;
-		}
 	}
 }
 
@@ -129,13 +119,6 @@
 			display: block;
 			margin: 0 auto;
 			text-align: center;
-			p {
-				font-size: 1.4em;
-				font-weight: 600;
-				padding-top: 1em;
-				color: $light-grey;
-				margin-bottom: 3em;
-			}
 		}
 	}
 	.section-three--img {
@@ -212,7 +195,6 @@
 					display: inline-block;
 					margin: 0 1.5em;
 					p {
-						font-size: 1.1em;
 						text-align: center;
 					}
 				}
