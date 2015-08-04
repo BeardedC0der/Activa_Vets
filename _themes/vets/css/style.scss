@@ -60,6 +60,7 @@ $breakpoints: (
 $inuit-enable-layout--rev:      true;
 $inuit-enable-layout--center:   true;
 $inuit-enable-layout--right:   	true;
+$inuit-enable-layout--flush:	true;
 
 
 @import "bower_components/inuit-layout/objects.layout";
@@ -67,13 +68,11 @@ $inuit-enable-layout--right:   	true;
 @import "bower_components/inuit-list-bare/objects.list-bare";
 @import "bower_components/inuit-list-inline/objects.list-inline";
 
-$inuit-enable-layout--flush:	true;
 
 // Components
 
 @import "ui/components.global";
 @import "ui/components.page-head";
-@import "ui/components.page-foot";
 @import "ui/components.page-tabs";
 @import "ui/components.page-table";
 @import "ui/components.page-forms";
@@ -86,7 +85,8 @@ $inuit-enable-layout--flush:	true;
 @import "ui/components.page-flivasorb";
 @import "ui/components.page-actiformcool";
 @import "ui/components.page-where-to-order";
-@import "ui/components.page-uses";
+@import "ui/components.page-products";
+
 
 
 

@@ -12,9 +12,13 @@ body {
 // Wraps
 
 .wrap {
-	width: 95%;
 	max-width: 100em;
 	margin: 0 auto;
+	padding: 1.5em;
+}
+.wrap--pseudo-img {
+	position: relative;
+	z-index: 1;
 }
 
 

@@ -1,9 +1,36 @@
 .section--grey {
-	@extend .solid;
 	background-color: $dark-grey;
 }
 
+.section--gradient {
+	background: #1a1a1a; /* Old browsers */
+	background: -moz-linear-gradient(top,  #1a1a1a 0%, #000000 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1a1a1a), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #1a1a1a 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #1a1a1a 0%,#000000 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #1a1a1a 0%,#000000 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #1a1a1a 0%,#000000 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a1a1a', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 
+}
+
+
+.section--woundcare-range {
+	padding: 3.5em 2.2em;	
+}
+
+.section--products {
+	border-top: 1px solid $light-grey;
+}
+
+
+
+.section--product-preview {
+	position: relative;
+}
+
+
+// about section
 .section--horses-paddock {
 	padding: 3.5em 2.2em 22em;
 }
@@ -28,90 +55,11 @@
 		padding: 3.5em 2.2em 80em;
 	}
 }
+// about end
 
-/* Section suprasorb */
-
-.section--suprasorb {
-	padding: 3.5em 2.2em 22em;
-}
-
-@include media-query(phablet-and-up) {
-	.section--suprasorb {
-		padding: 3.5em 2.2em 6em;
-	}
-}
-@include media-query(tablet-and-up) {
-	.section--suprasorb {
-		padding: 0 2.2em 6em;
-	}
-}
-@include media-query(lap-and-up) {
-	.section--suprasorb {
-		padding: 0 5.2em 6em;
-	}
-}
-@include media-query(desk) {
-	.section--suprasorb {
-		padding: 0 8.6em 6em;
-	}
-}
-
-/* Section suprasorb */
-
-.section--actiform {
-	padding: 3.5em 2.2em 22em;
-}
-
-@include media-query(phablet-and-up) {
-	.section--actiform {
-		padding: 3.5em 2.2em 6em;
-	}
-}
-@include media-query(tablet-and-up) {
-	.section--actiform {
-		padding: 0 2.2em 6em;
-	}
-}
-@include media-query(lap-and-up) {
-	.section--actiform {
-		padding: 0 5.2em 6em;
-	}
-}
-@include media-query(desk) {
-	.section--actiform {
-		padding: 0 8.6em 6em;
-	}
-}
-
-.section--pseudo-img {
-	position: relative;
-	z-index: 1;
-	height: 550px;
-	&:before,
-	&:after {
-		content: "";
-		position: absolute;
-		display: block;
-		
-	}
-}
-
-.section--gradient {
-	background: #1a1a1a; /* Old browsers */
-	background: -moz-linear-gradient(top,  #1a1a1a 0%, #000000 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1a1a1a), color-stop(100%,#000000)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #1a1a1a 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #1a1a1a 0%,#000000 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #1a1a1a 0%,#000000 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #1a1a1a 0%,#000000 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a1a1a', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-
-}
-
-.section--product-preview {
-	position: relative;
-}
 
 .section--contact {
 	padding: 1em 2em;
 }
+
+

@@ -16,7 +16,7 @@
     "templateDefaultPage": "index",
     "type": "simple",
     "useCompass": false,
-    "simpleModePartnerServer": "localhost:8888",
+    "simpleModePartnerServer": "activavets.dev",
     "simpleModeFileTypes": null,
     "modelSource": null,
     "domain": null,

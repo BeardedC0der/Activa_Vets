@@ -3,49 +3,18 @@
 	background: url(/assets/img/horses-2.jpg) no-repeat left bottom;
 	background-size: 120%;
 	background-color: #8A705F;
-	margin-bottom: 3em;
 }
 
 .about-intro {
 	text-align: center;
-	h2 {
+	h4 {
 		&:after {
 			content: "";
 			display: block;
-			width: 4em;
-			height: 2px;
+			width: 3em;
+			height: 1px;
 			background-color: white;
 			margin: 1em auto;
 		}
 	}
-	p {
-		margin-bottom: 2em;
-	}
-	button {
-		padding: 1em 1.3em;
-	}
-}
-
-@include media-query(tablet-and-up) {
-	.about-intro {
-		button {
-			padding: 0.5em;
-			width: 20em;
-		}
-	}
-}
-
-@include media-query(lap-and-up) {
-	.about-intro {
-		h2 {
-			padding: 0 5em;
-		}
-		p {
-			padding: 0 7em;
-		}
-	}
-}
-
-.contact-info {
-	margin-bottom: 3em;
 }

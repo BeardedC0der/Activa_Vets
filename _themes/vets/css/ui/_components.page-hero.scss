@@ -1,69 +1,68 @@
-.site-wrap {
-	position: relative;
-	top: 7em;
-}
-
 .section--woundcare-for-animals {
 	position: relative;
+	margin-bottom: 5em;
+	
 	h1 {
-		position: absolute;
-		z-index: 40;
-		max-width: 60%;
-		left: 0;
-		top: 0;
-		padding: 0.75rem;
+		text-align: left;
+		margin-right: 40%;
+		margin-bottom: 3em;
 	}
 	.hero--subheading {
-		position: absolute;
-		right: 0;
-		bottom: 1rem;
 		text-align: right;
-		padding-right: 0.5em;
-		max-width: 58%;
+		margin-left: 40%;
+		margin-bottom: 3em;
 	}
 	// Horse
-	&:before {
-		background: url(/assets/img/black-horse.jpg) no-repeat center center;
-		background-size: cover;
-		height: 340px;
-		width: 150px;
-		position: absolute;
-		bottom: 0;
-		z-index: -1;
-		left: 0px;
-	}
-	// DogCat
-	&:after {
-		background: url(/assets/img/dog-cat.jpg) no-repeat center center;
-		background-size: cover;
-		height: 280px;
-		width: 180px;
-		z-index: -1;
-		right: -20px;
-		top: -30px;
+	.wrap {
+		position: relative;
+		&:before,
+		&:after {
+			position: absolute;
+			content: '';
+			z-index: -1;
+		}
+		&:before {
+			background: url(/assets/img/black-horse.jpg) no-repeat center center;
+			background-size: cover;
+			height: 340px;
+			width: 150px;
+			bottom: 0;
+			left: 0;
+		}
+		// DogCat
+		&:after {
+			background: url(/assets/img/dog-cat.jpg) no-repeat center center;
+			background-size: cover;
+			height: 280px;
+			width: 180px;
+			right: -20px;
+			top: -30px;
+		}
 	}
 }
+/*
+
 
 @include media-query(phablet-and-up) {
 	.section--woundcare-for-animals {
 		h1 {
 			max-width: 59%;
-			padding: 0 0 0 0.75em;
 		}
 		.hero--subheading {
-			padding-right: 0.75em;
 			max-width: 57%;
 			bottom: 2rem;
 		}
-		// Horse
-		&:before {
-			height: 325px;
-			width: 195px;
-		}
-		// DogCat
-		&:after {
-			height: 315px;
-			width: 225px;
+		.wrap {
+			// Horse
+			&:before {
+				height: 325px;
+				width: 195px;
+			}
+			// DogCat
+			&:after {
+				height: 315px;
+				width: 225px;
+			}
 		}
 	}
 }
@@ -72,7 +71,7 @@
 	.section--woundcare-for-animals {
 		height: 675px;
 		h1 {
-			max-width: 50%;
+			max-width: 70%;
 		}
 		.hero--subheading {
 			max-width: 50%;
@@ -113,7 +112,6 @@
 			position: static;
 			text-align: center;
 			margin: 0 auto;
-			padding: 1em 0;
 			max-width: 18em;
 		}
 		// Horse
@@ -135,14 +133,12 @@
 	.section--woundcare-for-animals {
 		h1 {
 			padding: 0.5em 0;
-			max-width: 47%;
+			max-width: 70%;
 			position: relative;
+			margin-bottom: 2em;
 		}
 		.hero--subheading {
-			position: static;
 			text-align: center;
-			margin: 0 auto;
-			padding: 1em 0;
 			max-width: 16em;
 		}
 		// Horse
@@ -160,3 +156,4 @@
 		}
 	}
 }
+*/

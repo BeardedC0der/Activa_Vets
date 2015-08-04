@@ -1,23 +1,28 @@
-.graph-mobile {
+.woundcare-range--mobile {
 	visibility: visible;
 	height: 100%;
-}
-
-@include media-query(tablet-and-up) {
-	.graph-mobile {
-		visibility: hidden;
-		height: 0;
+	tr {
+		td {
+			display: block;
+		}
 	}
 }
 
-.graph-desk {
+@include media-query(tablet-and-up) {
+	.woundcare-range--mobile {
+		visibility: hidden;
+		display: none;
+	}
+}
+
+.woundcare-range--desktop {
 	visibility: hidden;
-	height: 0;
+	display: none;
 }
 
 @include media-query(tablet-and-up) {
-	.graph-desk {
+	.woundcare-range--desktop {
 		visibility: visible;
-		height: 100%;
+		display: table;
 	}
 }

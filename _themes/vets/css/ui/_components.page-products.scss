@@ -1,0 +1,18 @@
+.product-summary {
+	.graph-mobile {
+		display: inline-block;
+		margin-bottom: 1em;
+	}
+	.graph-desk {
+		display: none;
+	}
+	@include media-query(lap-and-up) {
+		.graph-mobile {
+			display: none;
+		}
+		.graph-desk {
+			display: inline-block;
+		}
+	}
+}
+
