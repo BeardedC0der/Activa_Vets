@@ -6,13 +6,19 @@
 	.graph-desk {
 		display: none;
 	}
-	@include media-query(lap-and-up) {
+	@include media-query(tablet-and-up) {
 		.graph-mobile {
 			display: none;
 		}
 		.graph-desk {
 			display: inline-block;
 		}
+	}
+}
+
+.clinicians {
+	p {
+		margin-bottom: 0.125em;
 	}
 }
 

@@ -38,20 +38,21 @@
 
 .where-to-order {
 	text-align: center;
-	h2 {
+	h3 {
 		margin-bottom: 0.125em;
 	}
 	.order-subheading {
-		color: $light-grey;
+		color: $lightest-grey;
 		margin-bottom: 2em;
 	}
 	.order--info {
 		text-align: center;
-		margin-bottom: 2em;
-		h3 {
-			margin: 0;
+		padding: 1.5em;
+		.h4 {
+			font-weight: 600;
+			margin-bottom: 0.25em;
 		}
-		p {
+		h4 {
 			margin-bottom: 0;
 		}
 		a {
@@ -59,6 +60,9 @@
 		}
 	}
 	@include media-query(lap-and-up) {
+		.order--info {
+			text-align: left;
+		}
 		.order--info:nth-of-type(-n+3) {
 			border-right: 1px solid $light-grey;
 		}

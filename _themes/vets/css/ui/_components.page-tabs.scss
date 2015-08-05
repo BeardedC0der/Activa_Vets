@@ -6,6 +6,8 @@
 	margin-top: -3em;
 	margin-bottom: 3em;
 	max-width: 70em;
+	position: relative;
+	z-index: 10000;
 }
 
 .tab,
@@ -16,7 +18,6 @@
 	width: 100%;
 	font-size: 1em;
 	text-align: center;
-	font-weight: 700;
 	text-decoration: none;
 	color: white;
 	padding: 1em 1em;
@@ -26,6 +27,9 @@
 	@include color-transition;
 	&:hover {
 		background-color: mix(black, $light-grey, 15%)
+	}
+	h2 {
+		margin-bottom: 0;
 	}
 
 }
@@ -63,12 +67,18 @@
 @include media-query(mobile) {
 	.tab {
 		display: none;
+		.tab--mobile {
+			border-width: 1px 0 0 0;
+		}
 	}
 	.tab--mobile {
 	
 	}
 	.tab__content {
 		display: none !important;
+		h3 {
+			display: none;
+		}
 	}
 	.tab__content--show {
 		display: block !important;

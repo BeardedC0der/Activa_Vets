@@ -588,6 +588,16 @@ body {
   font-family: "proxima-nova";
   color: white; }
 
+a {
+  color: white;
+  text-decoration: none; }
+
+@media screen and (min-width: 72em) {
+  body {
+    font-size: 1.125rem; } }
+@media screen and (min-width: 90em) {
+  body {
+    font-size: 1.25rem; } }
 .text-featured {
   font-size: 1.25rem; }
 
@@ -598,9 +608,6 @@ body {
 @media screen and (min-width: 45em) {
   .text-reversed {
     display: inline-block; } }
-@media screen and (min-width: 90em) {
-  body {
-    font-size: 1.25rem; } }
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, h6 {
   font-weight: 100;
   line-height: 1.2;
@@ -615,13 +622,13 @@ h1, .h1 {
     font-size: 2.75rem; } }
 @media screen and (min-width: 45em) and (max-width: 71.9375em) {
   h1, .h1 {
-    font-size: 3.5rem; } }
+    font-size: 2.5rem; } }
 @media screen and (min-width: 72em) and (max-width: 89.9375em) {
   h1, .h1 {
-    font-size: 4.5rem; } }
+    font-size: 3.5rem; } }
 @media screen and (min-width: 90em) {
   h1, .h1 {
-    font-size: 6rem; } }
+    font-size: 4.5rem; } }
 /* h2,.h2 */
 h2, .h2 {
   font-size: 1.875rem; }
@@ -640,40 +647,36 @@ h2, .h2 {
     font-size: 3.5rem; } }
 /* h3,.h3 */
 h3, .h3 {
-  font-size: 1.375rem; }
+  font-size: 1.875rem; }
 
 @media screen and (min-width: 25em) and (max-width: 44.9375em) {
   h3, .h3 {
-    font-size: rem; } }
+    font-size: 2rem; } }
 @media screen and (min-width: 45em) and (max-width: 71.9375em) {
   h3, .h3 {
-    font-size: rem; } }
+    font-size: 2.375rem; } }
 @media screen and (min-width: 72em) and (max-width: 89.9375em) {
   h3, .h3 {
-    font-size: rem; } }
+    font-size: 2.375rem; } }
 @media screen and (min-width: 90em) {
   h3, .h3 {
-    font-size: 2.125rem; } }
+    font-size: 2.625rem; } }
 /* h4,.h4 */
 h4, .h4 {
-  font-size: 1.375rem; }
+  font-size: 1rem; }
 
 @media screen and (min-width: 25em) and (max-width: 44.9375em) {
   h4, .h4 {
-    font-size: 1.125rem; } }
+    font-size: rem; } }
 @media screen and (min-width: 45em) and (max-width: 71.9375em) {
   h4, .h4 {
-    font-size: 1.25rem; } }
+    font-size: rem; } }
 @media screen and (min-width: 72em) and (max-width: 89.9375em) {
   h4, .h4 {
-    font-size: 1.375rem; } }
+    font-size: rem; } }
 @media screen and (min-width: 90em) {
   h4, .h4 {
     font-size: 1.5rem; } }
-a {
-  color: white;
-  text-decoration: none; }
-
 .btn--reversed {
   display: inline-block;
   background-color: transparent;
@@ -729,33 +732,29 @@ a {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a1a1a', endColorstr='#000000',GradientType=0 );
   /* IE6-9 */ }
 
-.section--woundcare-range {
-  padding: 3.5em 2.2em; }
-
 .section--products {
-  border-top: 1px solid #4D4D4D; }
+  border-top: 1px solid #4D4D4D;
+  position: relative;
+  z-index: 10000; }
 
 .section--product-preview {
   position: relative; }
 
 .section--horses-paddock {
-  padding: 3.5em 2.2em 22em; }
+  padding-bottom: 15em; }
 
 @media screen and (min-width: 25em) {
   .section--horses-paddock {
-    padding: 3.5em 2.2em 30em; } }
+    padding-bottom: 30em; } }
 @media screen and (min-width: 45em) {
   .section--horses-paddock {
-    padding: 3.5em 2.2em 40em; } }
+    padding-bottom: 45em; } }
 @media screen and (min-width: 72em) {
   .section--horses-paddock {
-    padding: 3.5em 2.2em 60em; } }
-@media screen and (min-width: 90em) {
+    padding-bottom: 60em; } }
+@media screen and (min-width: 120em) {
   .section--horses-paddock {
-    padding: 3.5em 2.2em 80em; } }
-.section--contact {
-  padding: 1em 2em; }
-
+    padding-bottom: 100em; } }
 /*------------------------------------*\
     #BUTTONS
 \*------------------------------------*/
@@ -965,9 +964,10 @@ body {
 .wrap--header {
   position: relative;
   width: 100%;
-  background-color: black;
+  background-color: transparent;
   height: 7em;
-  border-bottom: 1px solid #4D4D4D; }
+  border-bottom: 1px solid #4D4D4D;
+  margin-bottom: 2em; }
 
 .site-header {
   position: relative;
@@ -1109,7 +1109,9 @@ body.active {
   padding: 0;
   margin-top: -3em;
   margin-bottom: 3em;
-  max-width: 70em; }
+  max-width: 70em;
+  position: relative;
+  z-index: 10000; }
 
 .tab,
 .tab--mobile {
@@ -1119,7 +1121,6 @@ body.active {
   width: 100%;
   font-size: 1em;
   text-align: center;
-  font-weight: 700;
   text-decoration: none;
   color: white;
   padding: 1em 1em;
@@ -1134,6 +1135,9 @@ body.active {
   .tab:hover,
   .tab--mobile:hover {
     background-color: #414141; }
+  .tab h2,
+  .tab--mobile h2 {
+    margin-bottom: 0; }
 
 @media screen and (min-width: 45em) {
   .tab {
@@ -1161,9 +1165,13 @@ body.active {
 @media screen and (max-width: 44.9375em) {
   .tab {
     display: none; }
+    .tab .tab--mobile {
+      border-width: 1px 0 0 0; }
 
   .tab__content {
     display: none !important; }
+    .tab__content h3 {
+      display: none; }
 
   .tab__content--show {
     display: block !important; } }
@@ -1242,8 +1250,7 @@ textarea {
     margin: 1em auto; }
 
 .section--woundcare-for-animals {
-  position: relative;
-  margin-bottom: 5em; }
+  position: relative; }
   .section--woundcare-for-animals h1 {
     text-align: left;
     margin-right: 40%;
@@ -1261,8 +1268,8 @@ textarea {
     .section--woundcare-for-animals .wrap:before {
       background: url(/assets/img/black-horse.jpg) no-repeat center center;
       background-size: cover;
-      height: 340px;
-      width: 150px;
+      height: 300px;
+      width: 130px;
       bottom: 0;
       left: 0; }
     .section--woundcare-for-animals .wrap:after {
@@ -1271,138 +1278,92 @@ textarea {
       height: 280px;
       width: 180px;
       right: -20px;
-      top: -30px; }
+      top: 0; }
 
-/*
-
-
-@include media-query(phablet-and-up) {
-	.section--woundcare-for-animals {
-		h1 {
-			max-width: 59%;
-		}
-		.hero--subheading {
-			max-width: 57%;
-			bottom: 2rem;
-		}
-		.wrap {
-			// Horse
-			&:before {
-				height: 325px;
-				width: 195px;
-			}
-			// DogCat
-			&:after {
-				height: 315px;
-				width: 225px;
-			}
-		}
-	}
-}
-
-@include media-query(tablet-and-up) {
-	.section--woundcare-for-animals {
-		height: 675px;
-		h1 {
-			max-width: 70%;
-		}
-		.hero--subheading {
-			max-width: 50%;
-		}
-		// Horse
-		&:before {
-			height: 470px;
-			width: 288px;
-		}
-		// DogCat
-		&:after {
-			height: 440px;
-			width: 340px;
-		}
-	}
-}
-
-@include media-query(lap-and-up) {
-	.section--woundcare-for-animals {
-		h1 {
-			position: static;
-			text-align: center;
-			margin: 0 auto 2em;
-			padding: 1em 0;
-			&:after {
-				content: "";
-				display: inline-block;
-				height: 27px;
-				width: 50px;
-				left: 50%;
-				margin-left: -25px;
-				background: url(/assets/img/down.png) no-repeat;
-				position: absolute;
-				top: 4.7em;
-			}
-		}
-		.hero--subheading {
-			position: static;
-			text-align: center;
-			margin: 0 auto;
-			max-width: 18em;
-		}
-		// Horse
-		&:before {
-			height: 823px;
-			width: 450px;
-			top: -10em;
-			left: -6em;
-		}
-		// DogCat
-		&:after {
-			height: 460px;
-			width: 360px;
-		}
-	}
-}
-
-@include media-query(desk) {
-	.section--woundcare-for-animals {
-		h1 {
-			padding: 0.5em 0;
-			max-width: 70%;
-			position: relative;
-			margin-bottom: 2em;
-		}
-		.hero--subheading {
-			text-align: center;
-			max-width: 16em;
-		}
-		// Horse
-		&:before {
-			height: 1000px;
-			width: 600px;
-			top: -11em;
-			left: -9em;
-		}
-		// DogCat
-		&:after {
-			height: 650px;
-			width: 500px;
-			top: -2em;
-		}
-	}
-}
-*/
+@media screen and (min-width: 25em) {
+  .section--woundcare-for-animals h1 {
+    margin-right: 50%;
+    margin-bottom: 4em; }
+  .section--woundcare-for-animals .hero--subheading {
+    margin-left: 45%;
+    margin-bottom: 2em; }
+  .section--woundcare-for-animals .wrap:before {
+    height: 425px;
+    width: 200px; }
+  .section--woundcare-for-animals .wrap:after {
+    height: 315px;
+    width: 225px; } }
+@media screen and (min-width: 45em) {
+  .section--woundcare-for-animals {
+    margin-bottom: 5em; }
+    .section--woundcare-for-animals h1 {
+      margin-bottom: 6em; }
+    .section--woundcare-for-animals .hero--subheading {
+      margin-bottom: 3em; }
+    .section--woundcare-for-animals .wrap:before {
+      height: 590px;
+      width: 360px; }
+    .section--woundcare-for-animals .wrap:after {
+      height: 440px;
+      width: 340px; } }
+@media screen and (min-width: 72em) {
+  .section--woundcare-for-animals h1 {
+    position: relative;
+    text-align: center;
+    margin: 0 auto 3em;
+    max-width: 50%; }
+    .section--woundcare-for-animals h1:after {
+      content: "";
+      display: inline-block;
+      height: 27px;
+      width: 50px;
+      left: 50%;
+      margin-left: -25px;
+      background: url(/assets/img/down.png) no-repeat;
+      position: absolute;
+      bottom: -75%; }
+  .section--woundcare-for-animals .hero--subheading {
+    position: static;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 60%; }
+  .section--woundcare-for-animals .wrap:before {
+    height: 730px;
+    width: 440px;
+    top: -9em;
+    left: -5em; }
+  .section--woundcare-for-animals .wrap:after {
+    height: 460px;
+    width: 360px; } }
+@media screen and (min-width: 90em) {
+  .section--woundcare-for-animals h1 {
+    padding: 0.5em 0;
+    position: relative;
+    margin-bottom: 3em;
+    max-width: 50%; }
+    .section--woundcare-for-animals h1:after {
+      bottom: -40%; }
+  .section--woundcare-for-animals .hero--subheading {
+    text-align: center;
+    max-width: 45%; }
+  .section--woundcare-for-animals .wrap:before {
+    height: 1000px;
+    width: 600px; }
+  .section--woundcare-for-animals .wrap:after {
+    height: 650px;
+    width: 500px;
+    top: -2em; } }
 .contact {
   text-align: center; }
 
 .contact--method {
   text-align: left;
-  margin-bottom: 4em; }
+  margin-bottom: 2em; }
   .contact--method p {
     margin-bottom: 0.25em; }
 
-.send-us-a-message {
-  text-align: center; }
-
 .woundcare-range--mobile {
+  text-align: left;
   visibility: visible;
   height: 100%; }
   .woundcare-range--mobile tr td {
@@ -1413,6 +1374,7 @@ textarea {
     visibility: hidden;
     display: none; } }
 .woundcare-range--desktop {
+  text-align: left;
   visibility: hidden;
   display: none; }
 
@@ -1739,21 +1701,24 @@ textarea {
     display: none; } }
 .where-to-order {
   text-align: center; }
-  .where-to-order h2 {
+  .where-to-order h3 {
     margin-bottom: 0.125em; }
   .where-to-order .order-subheading {
-    color: #4D4D4D;
+    color: #808080;
     margin-bottom: 2em; }
   .where-to-order .order--info {
     text-align: center;
-    margin-bottom: 2em; }
-    .where-to-order .order--info h3 {
-      margin: 0; }
-    .where-to-order .order--info p {
+    padding: 1.5em; }
+    .where-to-order .order--info .h4 {
+      font-weight: 600;
+      margin-bottom: 0.25em; }
+    .where-to-order .order--info h4 {
       margin-bottom: 0; }
     .where-to-order .order--info a {
       text-decoration: underline; }
   @media screen and (min-width: 72em) {
+    .where-to-order .order--info {
+      text-align: left; }
     .where-to-order .order--info:nth-of-type(-n+3) {
       border-right: 1px solid #4D4D4D; } }
 
@@ -1762,11 +1727,14 @@ textarea {
   margin-bottom: 1em; }
 .product-summary .graph-desk {
   display: none; }
-@media screen and (min-width: 72em) {
+@media screen and (min-width: 45em) {
   .product-summary .graph-mobile {
     display: none; }
   .product-summary .graph-desk {
     display: inline-block; } }
+
+.clinicians p {
+  margin-bottom: 0.125em; }
 
 /*------------------------------------*\
     #CLEARFIX
@@ -1863,7 +1831,61 @@ textarea {
     width: 60% !important; }
 
   .u-4\/5-palm {
-    width: 80% !important; } }
+    width: 80% !important; }
+
+  .u-1\/6-palm {
+    width: 16.66667% !important; }
+
+  .u-2\/6-palm {
+    width: 33.33333% !important; }
+
+  .u-3\/6-palm {
+    width: 50% !important; }
+
+  .u-4\/6-palm {
+    width: 66.66667% !important; }
+
+  .u-5\/6-palm {
+    width: 83.33333% !important; }
+
+  .u-1\/7-palm {
+    width: 14.28571% !important; }
+
+  .u-2\/7-palm {
+    width: 28.57143% !important; }
+
+  .u-3\/7-palm {
+    width: 42.85714% !important; }
+
+  .u-4\/7-palm {
+    width: 57.14286% !important; }
+
+  .u-5\/7-palm {
+    width: 71.42857% !important; }
+
+  .u-6\/7-palm {
+    width: 85.71429% !important; }
+
+  .u-1\/8-palm {
+    width: 12.5% !important; }
+
+  .u-2\/8-palm {
+    width: 25% !important; }
+
+  .u-3\/8-palm {
+    width: 37.5% !important; }
+
+  .u-4\/8-palm {
+    width: 50% !important; }
+
+  .u-5\/8-palm {
+    width: 62.5% !important; }
+
+  .u-6\/8-palm {
+    width: 75% !important; }
+
+  .u-7\/8-palm {
+    width: 87.5% !important; } }
 @media screen and (min-width: 25em) and (max-width: 44.9375em) {
   .u-1\/1-phablet {
     width: 100% !important; }
@@ -1896,7 +1918,61 @@ textarea {
     width: 60% !important; }
 
   .u-4\/5-phablet {
-    width: 80% !important; } }
+    width: 80% !important; }
+
+  .u-1\/6-phablet {
+    width: 16.66667% !important; }
+
+  .u-2\/6-phablet {
+    width: 33.33333% !important; }
+
+  .u-3\/6-phablet {
+    width: 50% !important; }
+
+  .u-4\/6-phablet {
+    width: 66.66667% !important; }
+
+  .u-5\/6-phablet {
+    width: 83.33333% !important; }
+
+  .u-1\/7-phablet {
+    width: 14.28571% !important; }
+
+  .u-2\/7-phablet {
+    width: 28.57143% !important; }
+
+  .u-3\/7-phablet {
+    width: 42.85714% !important; }
+
+  .u-4\/7-phablet {
+    width: 57.14286% !important; }
+
+  .u-5\/7-phablet {
+    width: 71.42857% !important; }
+
+  .u-6\/7-phablet {
+    width: 85.71429% !important; }
+
+  .u-1\/8-phablet {
+    width: 12.5% !important; }
+
+  .u-2\/8-phablet {
+    width: 25% !important; }
+
+  .u-3\/8-phablet {
+    width: 37.5% !important; }
+
+  .u-4\/8-phablet {
+    width: 50% !important; }
+
+  .u-5\/8-phablet {
+    width: 62.5% !important; }
+
+  .u-6\/8-phablet {
+    width: 75% !important; }
+
+  .u-7\/8-phablet {
+    width: 87.5% !important; } }
 @media screen and (min-width: 25em) {
   .u-1\/1-phablet-and-up {
     width: 100% !important; }
@@ -1929,7 +2005,61 @@ textarea {
     width: 60% !important; }
 
   .u-4\/5-phablet-and-up {
-    width: 80% !important; } }
+    width: 80% !important; }
+
+  .u-1\/6-phablet-and-up {
+    width: 16.66667% !important; }
+
+  .u-2\/6-phablet-and-up {
+    width: 33.33333% !important; }
+
+  .u-3\/6-phablet-and-up {
+    width: 50% !important; }
+
+  .u-4\/6-phablet-and-up {
+    width: 66.66667% !important; }
+
+  .u-5\/6-phablet-and-up {
+    width: 83.33333% !important; }
+
+  .u-1\/7-phablet-and-up {
+    width: 14.28571% !important; }
+
+  .u-2\/7-phablet-and-up {
+    width: 28.57143% !important; }
+
+  .u-3\/7-phablet-and-up {
+    width: 42.85714% !important; }
+
+  .u-4\/7-phablet-and-up {
+    width: 57.14286% !important; }
+
+  .u-5\/7-phablet-and-up {
+    width: 71.42857% !important; }
+
+  .u-6\/7-phablet-and-up {
+    width: 85.71429% !important; }
+
+  .u-1\/8-phablet-and-up {
+    width: 12.5% !important; }
+
+  .u-2\/8-phablet-and-up {
+    width: 25% !important; }
+
+  .u-3\/8-phablet-and-up {
+    width: 37.5% !important; }
+
+  .u-4\/8-phablet-and-up {
+    width: 50% !important; }
+
+  .u-5\/8-phablet-and-up {
+    width: 62.5% !important; }
+
+  .u-6\/8-phablet-and-up {
+    width: 75% !important; }
+
+  .u-7\/8-phablet-and-up {
+    width: 87.5% !important; } }
 @media screen and (max-width: 44.9375em) {
   .u-1\/1-mobile {
     width: 100% !important; }
@@ -1962,7 +2092,61 @@ textarea {
     width: 60% !important; }
 
   .u-4\/5-mobile {
-    width: 80% !important; } }
+    width: 80% !important; }
+
+  .u-1\/6-mobile {
+    width: 16.66667% !important; }
+
+  .u-2\/6-mobile {
+    width: 33.33333% !important; }
+
+  .u-3\/6-mobile {
+    width: 50% !important; }
+
+  .u-4\/6-mobile {
+    width: 66.66667% !important; }
+
+  .u-5\/6-mobile {
+    width: 83.33333% !important; }
+
+  .u-1\/7-mobile {
+    width: 14.28571% !important; }
+
+  .u-2\/7-mobile {
+    width: 28.57143% !important; }
+
+  .u-3\/7-mobile {
+    width: 42.85714% !important; }
+
+  .u-4\/7-mobile {
+    width: 57.14286% !important; }
+
+  .u-5\/7-mobile {
+    width: 71.42857% !important; }
+
+  .u-6\/7-mobile {
+    width: 85.71429% !important; }
+
+  .u-1\/8-mobile {
+    width: 12.5% !important; }
+
+  .u-2\/8-mobile {
+    width: 25% !important; }
+
+  .u-3\/8-mobile {
+    width: 37.5% !important; }
+
+  .u-4\/8-mobile {
+    width: 50% !important; }
+
+  .u-5\/8-mobile {
+    width: 62.5% !important; }
+
+  .u-6\/8-mobile {
+    width: 75% !important; }
+
+  .u-7\/8-mobile {
+    width: 87.5% !important; } }
 @media screen and (min-width: 45em) and (max-width: 71.9375em) {
   .u-1\/1-tablet {
     width: 100% !important; }
@@ -1995,7 +2179,61 @@ textarea {
     width: 60% !important; }
 
   .u-4\/5-tablet {
-    width: 80% !important; } }
+    width: 80% !important; }
+
+  .u-1\/6-tablet {
+    width: 16.66667% !important; }
+
+  .u-2\/6-tablet {
+    width: 33.33333% !important; }
+
+  .u-3\/6-tablet {
+    width: 50% !important; }
+
+  .u-4\/6-tablet {
+    width: 66.66667% !important; }
+
+  .u-5\/6-tablet {
+    width: 83.33333% !important; }
+
+  .u-1\/7-tablet {
+    width: 14.28571% !important; }
+
+  .u-2\/7-tablet {
+    width: 28.57143% !important; }
+
+  .u-3\/7-tablet {
+    width: 42.85714% !important; }
+
+  .u-4\/7-tablet {
+    width: 57.14286% !important; }
+
+  .u-5\/7-tablet {
+    width: 71.42857% !important; }
+
+  .u-6\/7-tablet {
+    width: 85.71429% !important; }
+
+  .u-1\/8-tablet {
+    width: 12.5% !important; }
+
+  .u-2\/8-tablet {
+    width: 25% !important; }
+
+  .u-3\/8-tablet {
+    width: 37.5% !important; }
+
+  .u-4\/8-tablet {
+    width: 50% !important; }
+
+  .u-5\/8-tablet {
+    width: 62.5% !important; }
+
+  .u-6\/8-tablet {
+    width: 75% !important; }
+
+  .u-7\/8-tablet {
+    width: 87.5% !important; } }
 @media screen and (min-width: 45em) {
   .u-1\/1-tablet-and-up {
     width: 100% !important; }
@@ -2028,7 +2266,61 @@ textarea {
     width: 60% !important; }
 
   .u-4\/5-tablet-and-up {
-    width: 80% !important; } }
+    width: 80% !important; }
+
+  .u-1\/6-tablet-and-up {
+    width: 16.66667% !important; }
+
+  .u-2\/6-tablet-and-up {
+    width: 33.33333% !important; }
+
+  .u-3\/6-tablet-and-up {
+    width: 50% !important; }
+
+  .u-4\/6-tablet-and-up {
+    width: 66.66667% !important; }
+
+  .u-5\/6-tablet-and-up {
+    width: 83.33333% !important; }
+
+  .u-1\/7-tablet-and-up {
+    width: 14.28571% !important; }
+
+  .u-2\/7-tablet-and-up {
+    width: 28.57143% !important; }
+
+  .u-3\/7-tablet-and-up {
+    width: 42.85714% !important; }
+
+  .u-4\/7-tablet-and-up {
+    width: 57.14286% !important; }
+
+  .u-5\/7-tablet-and-up {
+    width: 71.42857% !important; }
+
+  .u-6\/7-tablet-and-up {
+    width: 85.71429% !important; }
+
+  .u-1\/8-tablet-and-up {
+    width: 12.5% !important; }
+
+  .u-2\/8-tablet-and-up {
+    width: 25% !important; }
+
+  .u-3\/8-tablet-and-up {
+    width: 37.5% !important; }
+
+  .u-4\/8-tablet-and-up {
+    width: 50% !important; }
+
+  .u-5\/8-tablet-and-up {
+    width: 62.5% !important; }
+
+  .u-6\/8-tablet-and-up {
+    width: 75% !important; }
+
+  .u-7\/8-tablet-and-up {
+    width: 87.5% !important; } }
 @media screen and (min-width: 72em) and (max-width: 89.9375em) {
   .u-1\/1-lap {
     width: 100% !important; }
@@ -2061,7 +2353,61 @@ textarea {
     width: 60% !important; }
 
   .u-4\/5-lap {
-    width: 80% !important; } }
+    width: 80% !important; }
+
+  .u-1\/6-lap {
+    width: 16.66667% !important; }
+
+  .u-2\/6-lap {
+    width: 33.33333% !important; }
+
+  .u-3\/6-lap {
+    width: 50% !important; }
+
+  .u-4\/6-lap {
+    width: 66.66667% !important; }
+
+  .u-5\/6-lap {
+    width: 83.33333% !important; }
+
+  .u-1\/7-lap {
+    width: 14.28571% !important; }
+
+  .u-2\/7-lap {
+    width: 28.57143% !important; }
+
+  .u-3\/7-lap {
+    width: 42.85714% !important; }
+
+  .u-4\/7-lap {
+    width: 57.14286% !important; }
+
+  .u-5\/7-lap {
+    width: 71.42857% !important; }
+
+  .u-6\/7-lap {
+    width: 85.71429% !important; }
+
+  .u-1\/8-lap {
+    width: 12.5% !important; }
+
+  .u-2\/8-lap {
+    width: 25% !important; }
+
+  .u-3\/8-lap {
+    width: 37.5% !important; }
+
+  .u-4\/8-lap {
+    width: 50% !important; }
+
+  .u-5\/8-lap {
+    width: 62.5% !important; }
+
+  .u-6\/8-lap {
+    width: 75% !important; }
+
+  .u-7\/8-lap {
+    width: 87.5% !important; } }
 @media screen and (min-width: 72em) {
   .u-1\/1-lap-and-up {
     width: 100% !important; }
@@ -2094,7 +2440,61 @@ textarea {
     width: 60% !important; }
 
   .u-4\/5-lap-and-up {
-    width: 80% !important; } }
+    width: 80% !important; }
+
+  .u-1\/6-lap-and-up {
+    width: 16.66667% !important; }
+
+  .u-2\/6-lap-and-up {
+    width: 33.33333% !important; }
+
+  .u-3\/6-lap-and-up {
+    width: 50% !important; }
+
+  .u-4\/6-lap-and-up {
+    width: 66.66667% !important; }
+
+  .u-5\/6-lap-and-up {
+    width: 83.33333% !important; }
+
+  .u-1\/7-lap-and-up {
+    width: 14.28571% !important; }
+
+  .u-2\/7-lap-and-up {
+    width: 28.57143% !important; }
+
+  .u-3\/7-lap-and-up {
+    width: 42.85714% !important; }
+
+  .u-4\/7-lap-and-up {
+    width: 57.14286% !important; }
+
+  .u-5\/7-lap-and-up {
+    width: 71.42857% !important; }
+
+  .u-6\/7-lap-and-up {
+    width: 85.71429% !important; }
+
+  .u-1\/8-lap-and-up {
+    width: 12.5% !important; }
+
+  .u-2\/8-lap-and-up {
+    width: 25% !important; }
+
+  .u-3\/8-lap-and-up {
+    width: 37.5% !important; }
+
+  .u-4\/8-lap-and-up {
+    width: 50% !important; }
+
+  .u-5\/8-lap-and-up {
+    width: 62.5% !important; }
+
+  .u-6\/8-lap-and-up {
+    width: 75% !important; }
+
+  .u-7\/8-lap-and-up {
+    width: 87.5% !important; } }
 @media screen and (max-width: 71.9375em) {
   .u-1\/1-portable {
     width: 100% !important; }
@@ -2127,7 +2527,61 @@ textarea {
     width: 60% !important; }
 
   .u-4\/5-portable {
-    width: 80% !important; } }
+    width: 80% !important; }
+
+  .u-1\/6-portable {
+    width: 16.66667% !important; }
+
+  .u-2\/6-portable {
+    width: 33.33333% !important; }
+
+  .u-3\/6-portable {
+    width: 50% !important; }
+
+  .u-4\/6-portable {
+    width: 66.66667% !important; }
+
+  .u-5\/6-portable {
+    width: 83.33333% !important; }
+
+  .u-1\/7-portable {
+    width: 14.28571% !important; }
+
+  .u-2\/7-portable {
+    width: 28.57143% !important; }
+
+  .u-3\/7-portable {
+    width: 42.85714% !important; }
+
+  .u-4\/7-portable {
+    width: 57.14286% !important; }
+
+  .u-5\/7-portable {
+    width: 71.42857% !important; }
+
+  .u-6\/7-portable {
+    width: 85.71429% !important; }
+
+  .u-1\/8-portable {
+    width: 12.5% !important; }
+
+  .u-2\/8-portable {
+    width: 25% !important; }
+
+  .u-3\/8-portable {
+    width: 37.5% !important; }
+
+  .u-4\/8-portable {
+    width: 50% !important; }
+
+  .u-5\/8-portable {
+    width: 62.5% !important; }
+
+  .u-6\/8-portable {
+    width: 75% !important; }
+
+  .u-7\/8-portable {
+    width: 87.5% !important; } }
 @media screen and (min-width: 90em) {
   .u-1\/1-desk {
     width: 100% !important; }
@@ -2160,7 +2614,61 @@ textarea {
     width: 60% !important; }
 
   .u-4\/5-desk {
-    width: 80% !important; } }
+    width: 80% !important; }
+
+  .u-1\/6-desk {
+    width: 16.66667% !important; }
+
+  .u-2\/6-desk {
+    width: 33.33333% !important; }
+
+  .u-3\/6-desk {
+    width: 50% !important; }
+
+  .u-4\/6-desk {
+    width: 66.66667% !important; }
+
+  .u-5\/6-desk {
+    width: 83.33333% !important; }
+
+  .u-1\/7-desk {
+    width: 14.28571% !important; }
+
+  .u-2\/7-desk {
+    width: 28.57143% !important; }
+
+  .u-3\/7-desk {
+    width: 42.85714% !important; }
+
+  .u-4\/7-desk {
+    width: 57.14286% !important; }
+
+  .u-5\/7-desk {
+    width: 71.42857% !important; }
+
+  .u-6\/7-desk {
+    width: 85.71429% !important; }
+
+  .u-1\/8-desk {
+    width: 12.5% !important; }
+
+  .u-2\/8-desk {
+    width: 25% !important; }
+
+  .u-3\/8-desk {
+    width: 37.5% !important; }
+
+  .u-4\/8-desk {
+    width: 50% !important; }
+
+  .u-5\/8-desk {
+    width: 62.5% !important; }
+
+  .u-6\/8-desk {
+    width: 75% !important; }
+
+  .u-7\/8-desk {
+    width: 87.5% !important; } }
 @media screen and (min-width: 120em) {
   .u-1\/1-desk-wide {
     width: 100% !important; }
@@ -2193,7 +2701,61 @@ textarea {
     width: 60% !important; }
 
   .u-4\/5-desk-wide {
-    width: 80% !important; } }
+    width: 80% !important; }
+
+  .u-1\/6-desk-wide {
+    width: 16.66667% !important; }
+
+  .u-2\/6-desk-wide {
+    width: 33.33333% !important; }
+
+  .u-3\/6-desk-wide {
+    width: 50% !important; }
+
+  .u-4\/6-desk-wide {
+    width: 66.66667% !important; }
+
+  .u-5\/6-desk-wide {
+    width: 83.33333% !important; }
+
+  .u-1\/7-desk-wide {
+    width: 14.28571% !important; }
+
+  .u-2\/7-desk-wide {
+    width: 28.57143% !important; }
+
+  .u-3\/7-desk-wide {
+    width: 42.85714% !important; }
+
+  .u-4\/7-desk-wide {
+    width: 57.14286% !important; }
+
+  .u-5\/7-desk-wide {
+    width: 71.42857% !important; }
+
+  .u-6\/7-desk-wide {
+    width: 85.71429% !important; }
+
+  .u-1\/8-desk-wide {
+    width: 12.5% !important; }
+
+  .u-2\/8-desk-wide {
+    width: 25% !important; }
+
+  .u-3\/8-desk-wide {
+    width: 37.5% !important; }
+
+  .u-4\/8-desk-wide {
+    width: 50% !important; }
+
+  .u-5\/8-desk-wide {
+    width: 62.5% !important; }
+
+  .u-6\/8-desk-wide {
+    width: 75% !important; }
+
+  .u-7\/8-desk-wide {
+    width: 87.5% !important; } }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .u-1\/1-retina {
     width: 100% !important; }
@@ -2226,7 +2788,61 @@ textarea {
     width: 60% !important; }
 
   .u-4\/5-retina {
-    width: 80% !important; } }
+    width: 80% !important; }
+
+  .u-1\/6-retina {
+    width: 16.66667% !important; }
+
+  .u-2\/6-retina {
+    width: 33.33333% !important; }
+
+  .u-3\/6-retina {
+    width: 50% !important; }
+
+  .u-4\/6-retina {
+    width: 66.66667% !important; }
+
+  .u-5\/6-retina {
+    width: 83.33333% !important; }
+
+  .u-1\/7-retina {
+    width: 14.28571% !important; }
+
+  .u-2\/7-retina {
+    width: 28.57143% !important; }
+
+  .u-3\/7-retina {
+    width: 42.85714% !important; }
+
+  .u-4\/7-retina {
+    width: 57.14286% !important; }
+
+  .u-5\/7-retina {
+    width: 71.42857% !important; }
+
+  .u-6\/7-retina {
+    width: 85.71429% !important; }
+
+  .u-1\/8-retina {
+    width: 12.5% !important; }
+
+  .u-2\/8-retina {
+    width: 25% !important; }
+
+  .u-3\/8-retina {
+    width: 37.5% !important; }
+
+  .u-4\/8-retina {
+    width: 50% !important; }
+
+  .u-5\/8-retina {
+    width: 62.5% !important; }
+
+  .u-6\/8-retina {
+    width: 75% !important; }
+
+  .u-7\/8-retina {
+    width: 87.5% !important; } }
 /*------------------------------------*\
     #SPACING
 \*------------------------------------*/

@@ -15,12 +15,10 @@
 }
 
 
-.section--woundcare-range {
-	padding: 3.5em 2.2em;	
-}
-
 .section--products {
 	border-top: 1px solid $light-grey;
+	position: relative;
+	z-index: 10000;
 }
 
 
@@ -32,34 +30,30 @@
 
 // about section
 .section--horses-paddock {
-	padding: 3.5em 2.2em 22em;
+	padding-bottom: 15em;
 }
 
 @include media-query(phablet-and-up) {
 	.section--horses-paddock {
-		padding: 3.5em 2.2em 30em;
+		padding-bottom: 30em;
 	}
 }
 @include media-query(tablet-and-up) {
 	.section--horses-paddock {
-		padding: 3.5em 2.2em 40em;
+		padding-bottom: 45em;
 	}
 }
 @include media-query(lap-and-up) {
 	.section--horses-paddock {
-		padding: 3.5em 2.2em 60em;
+		padding-bottom: 60em;
 	}
 }
-@include media-query(desk) {
+@include media-query(desk-wide) {
 	.section--horses-paddock {
-		padding: 3.5em 2.2em 80em;
+		padding-bottom: 100em;
 	}
 }
 // about end
 
-
-.section--contact {
-	padding: 1em 2em;
-}
 
 

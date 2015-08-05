@@ -8,9 +8,10 @@
 .wrap--header {
 	position: relative;
 	width: 100%;
-	background-color: black;
+	background-color: transparent;
 	height: 7em;
 	border-bottom: 1px solid $light-grey;
+	margin-bottom: 2em;
 }
 
 .site-header {

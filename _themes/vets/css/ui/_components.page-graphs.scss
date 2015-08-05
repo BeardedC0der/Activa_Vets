@@ -1,4 +1,5 @@
 .woundcare-range--mobile {
+	text-align: left;
 	visibility: visible;
 	height: 100%;
 	tr {
@@ -16,6 +17,7 @@
 }
 
 .woundcare-range--desktop {
+	text-align: left;
 	visibility: hidden;
 	display: none;
 }
