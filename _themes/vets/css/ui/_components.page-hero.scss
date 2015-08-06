@@ -70,21 +70,40 @@
 	.section--woundcare-for-animals {
 		margin-bottom: 5em;
 		h1 {
-			margin-bottom: 6em;
+			position: relative;
+			text-align: center;
+			margin: 0 auto 3em;
+			max-width: 50%;
+			&:after {
+				content: "";
+				display: inline-block;
+				height: 27px;
+				width: 50px;
+				left: 50%;
+				margin-left: -25px;
+				background: url(/assets/img/down.png) no-repeat;
+				position: absolute;
+				bottom: -50%;
+			}
 		}
 		.hero--subheading {
-			margin-bottom: 3em;
+			position: static;
+			text-align: center;
+			margin: 0 auto;
+			max-width: 50%;
 		}
 		.wrap {
 			// Horse
 			&:before {
-				height: 590px;
-				width: 360px;
+				height: 527px;
+				width: 312px;
+				top: -7em;
+				left: -4em;
 			}
 			// DogCat
 			&:after {
-				height: 440px;
-				width: 340px;
+				height: 360px;
+				width: 260px;
 			}
 		}
 	}
@@ -92,6 +111,7 @@
 
 @include media-query(lap-and-up) {
 	.section--woundcare-for-animals {
+		margin-bottom: 5em;
 		h1 {
 			position: relative;
 			text-align: center;
