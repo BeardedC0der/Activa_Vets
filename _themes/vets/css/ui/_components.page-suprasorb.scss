@@ -1,34 +1,37 @@
-.suprasorb-hero {
-	position: relative;
-	background: url(/assets/img/suprasorb/Suprasorb-A+Ag.png) no-repeat center top;
-	background-size: 90%;
-	.suprasorb-content {
-		padding-top: 80%;
+.section-suprasorb {
+	.wrap {
+		position: relative;
+		&:before,
+		&:after {
+			position: absolute;
+			content: '';
+		}
+		&:after {
+			background: url(/assets/img/suprasorb/Suprasorb-A+Ag.png) no-repeat center top;
+			background-size: contain;
+			height: 100%;
+			width: 100%;
+			top: 0;
+		}
+	}
+	h1 {
+		margin-top: 95%;
 	}
 }
 
 @include media-query(lap-and-up) {
-	.suprasorb-hero {
-		background: url(/assets/img/suprasorb/Suprasorb-A+Ag.png) no-repeat center right;
-		background-position: 115% 45%;
-		.suprasorb-content {
-			padding-top: 10%;
+	.section-suprasorb {
+		.wrap {
+			&:after {
+				height: 100%;
+				width: 100%;
+				top: 0;
+				right: -20em;
+			}
+	
+			h1 {
+				margin-top: 0;
+			}
 		}
-	}
-}
-
-@include media-query(desk) {
-	.suprasorb-hero {
-		background: url(/assets/img/suprasorb/Suprasorb-A+Ag.png) no-repeat center right;
-		background-position: 110% 45%;
-		background-size: 40%;
-	}
-}
-
-.suprasorb-slider {
-	text-align: center;
-	height: 800px;
-	h2 {
-		padding: 1.5em 0 0.5em;
 	}
 }

@@ -594,9 +594,27 @@ a {
   color: white;
   text-decoration: none; }
 
-.text-featured {
-  font-size: 1.25rem; }
+/*
+@include media-query(desk) {
+	body {
+		font-size: 1.5rem;
+	}
+}
+*/
+.small {
+  font-size: 1rem; }
 
+.medium {
+  font-size: 1.125rem; }
+
+.text-featured {
+  font-size: 1rem;
+  margin-bottom: 1em; }
+
+@media screen and (min-width: 72em) {
+  .text-featured {
+    font-size: 1.25rem;
+    margin-bottom: 1em; } }
 .text-reversed {
   color: #808080;
   display: block; }
@@ -604,7 +622,10 @@ a {
 @media screen and (min-width: 45em) {
   .text-reversed {
     display: inline-block; } }
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, h6 {
+@media screen and (min-width: 90em) {
+  p {
+    font-size: 1.5em; } }
+h1, .h1, h2, .h2, .section-hero .content-left p:first-child, h3, .h3, h4, .h4, h5, h6 {
   font-weight: 100;
   line-height: 1.2;
   color: white; }
@@ -625,21 +646,36 @@ h1, .h1 {
 @media screen and (min-width: 90em) {
   h1, .h1 {
     font-size: 4.5rem; } }
+.product-heading {
+  font-size: 1.375rem; }
+
+@media screen and (min-width: 25em) and (max-width: 44.9375em) {
+  .product-heading {
+    font-size: rem; } }
+@media screen and (min-width: 45em) and (max-width: 71.9375em) {
+  .product-heading {
+    font-size: rem; } }
+@media screen and (min-width: 72em) and (max-width: 89.9375em) {
+  .product-heading {
+    font-size: rem; } }
+@media screen and (min-width: 90em) {
+  .product-heading {
+    font-size: 3.125rem; } }
 /* h2,.h2 */
-h2, .h2 {
+h2, .h2, .section-hero .content-left p:first-child {
   font-size: 1.875rem; }
 
 @media screen and (min-width: 25em) and (max-width: 44.9375em) {
-  h2, .h2 {
+  h2, .h2, .section-hero .content-left p:first-child {
     font-size: 2rem; } }
 @media screen and (min-width: 45em) and (max-width: 71.9375em) {
-  h2, .h2 {
-    font-size: 2.5em; } }
+  h2, .h2, .section-hero .content-left p:first-child {
+    font-size: 2.375em; } }
 @media screen and (min-width: 72em) and (max-width: 89.9375em) {
-  h2, .h2 {
+  h2, .h2, .section-hero .content-left p:first-child {
     font-size: 2.5rem; } }
 @media screen and (min-width: 90em) {
-  h2, .h2 {
+  h2, .h2, .section-hero .content-left p:first-child {
     font-size: 2.875rem; } }
 /* h3,.h3 */
 h3, .h3 {
@@ -650,16 +686,16 @@ h3, .h3 {
     font-size: 2rem; } }
 @media screen and (min-width: 45em) and (max-width: 71.9375em) {
   h3, .h3 {
-    font-size: 1.375rem; } }
+    font-size: 2.25rem; } }
 @media screen and (min-width: 72em) and (max-width: 89.9375em) {
   h3, .h3 {
-    font-size: 1.875rem; } }
+    font-size: 2.5rem; } }
 @media screen and (min-width: 90em) {
   h3, .h3 {
-    font-size: 1.875rem; } }
+    font-size: 2.625rem; } }
 /* h4,.h4 */
 h4, .h4 {
-  font-size: 1rem; }
+  font-size: 1.375rem; }
 
 @media screen and (min-width: 25em) and (max-width: 44.9375em) {
   h4, .h4 {
@@ -672,7 +708,7 @@ h4, .h4 {
     font-size: rem; } }
 @media screen and (min-width: 90em) {
   h4, .h4 {
-    font-size: 1.5rem; } }
+    font-size: 2.125rem; } }
 .btn--reversed {
   display: inline-block;
   background-color: transparent;
@@ -707,6 +743,18 @@ h4, .h4 {
 @media screen and (min-width: 90em) {
   .btn--reversed {
     max-width: 20.25em; } }
+.section {
+  padding: 1.5em 0; }
+
+@media screen and (min-width: 45em) {
+  .section {
+    padding: 3em 0; } }
+@media screen and (min-width: 72em) {
+  .section {
+    padding: 4.5em 0; } }
+@media screen and (min-width: 90em) {
+  .section {
+    padding: 6em 0; } }
 .section--grey {
   background-color: #1A1A1A; }
 
@@ -731,7 +779,7 @@ h4, .h4 {
 .section--products {
   border-top: 1px solid #4D4D4D;
   position: relative;
-  z-index: 10000; }
+  z-index: 10; }
 
 .section--product-preview {
   position: relative; }
@@ -932,10 +980,17 @@ body {
   width: 1px; }
 
 .wrap {
-  max-width: 100em;
+  width: 100%;
   margin: 0 auto;
   padding: 1.5em; }
 
+@media screen and (min-width: 72em) {
+  .wrap {
+    padding: 0;
+    max-width: 64em; } }
+@media screen and (min-width: 90em) {
+  .wrap {
+    max-width: 80em; } }
 .wrap--pseudo-img {
   position: relative;
   z-index: 1; }
@@ -952,6 +1007,12 @@ body {
 .t-center {
   text-align: center; }
 
+@media screen and (min-width: 45em) {
+  .t-right--tablet {
+    text-align: right; } }
+@media screen and (max-width: 44.9375em) {
+  .t-center--mobile {
+    text-align: center; } }
 .logo {
   margin: 1em;
   position: relative;
@@ -961,9 +1022,11 @@ body {
   position: relative;
   width: 100%;
   background-color: transparent;
-  height: 7em;
-  border-bottom: 1px solid #4D4D4D;
-  margin-bottom: 2em; }
+  border-bottom: 1px solid #4D4D4D; }
+
+.logo-link {
+  display: block;
+  width: 172px; }
 
 .site-header {
   position: relative;
@@ -992,7 +1055,11 @@ Page Nav
 
 @media screen and (min-width: 72em) {
   .desktop--nav {
-    display: block; } }
+    display: block;
+    font-size: 1rem; } }
+@media screen and (min-width: 90em) {
+  .desktop--nav {
+    top: 2.75em; } }
 .button_container {
   position: absolute;
   top: 50%;
@@ -1101,14 +1168,24 @@ body.active {
   height: 100vh;
   overflow-y: hidden; }
 
+@media screen and (max-width: 44.9375em) {
+  .section--products {
+    padding-bottom: 0;
+    padding-top: 3em; } }
 .wrap--tabs {
   padding: 0;
-  margin-top: -3em;
+  margin-top: -6em;
   margin-bottom: 3em;
   max-width: 70em;
   position: relative;
-  z-index: 10000; }
+  z-index: 10; }
 
+@media screen and (min-width: 72em) {
+  .wrap--tabs {
+    margin-top: -7.5em; } }
+@media screen and (min-width: 90em) {
+  .wrap--tabs {
+    margin-top: -9em; } }
 .tab,
 .tab--mobile {
   display: inline-block;
@@ -1136,6 +1213,10 @@ body.active {
     margin-bottom: 0; }
 
 @media screen and (min-width: 45em) {
+  .tab-blocks--light .tab.tab--active {
+    background-color: #1A1A1A;
+    border-bottom: 1px solid #1A1A1A; }
+
   .tab {
     border-width: 0; }
     .tab.tab--active {
@@ -1176,7 +1257,8 @@ table {
   table tr {
     border-bottom: 1px solid #4D4D4D; }
   table td {
-    padding: 1.5em 0px; }
+    padding: 1.5em 0px;
+    font-size: 0.75em; }
     table td span {
       display: block;
       width: 10px;
@@ -1204,7 +1286,7 @@ input, textarea {
   background-color: transparent;
   border: 1px solid #4D4D4D;
   color: #4D4D4D;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   width: 100%; }
   input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     color: #4D4D4D;
@@ -1229,6 +1311,35 @@ textarea {
 @media screen and (min-width: 90em) {
   input, textarea {
     display: inline-block; } }
+input[type="checkbox"] + label span, textarea[type="checkbox"] + label span {
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-top: -5px;
+  width: 32px;
+  height: 32px;
+  border: solid 1px #808080;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+  margin-right: 0.75em; }
+
+input[type="checkbox"]:checked + label span, textarea[type="checkbox"]:checked + label span {
+  background: url(/assets/img/checked.png) no-repeat center center;
+  background-size: 1em; }
+
+.checkbox-contact {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
 .about {
   position: relative;
   background: url(/assets/img/horses-2.jpg) no-repeat left bottom;
@@ -1237,7 +1348,7 @@ textarea {
 
 .about-intro {
   text-align: center; }
-  .about-intro h4:after {
+  .about-intro h3:after {
     content: "";
     display: block;
     width: 3em;
@@ -1311,7 +1422,7 @@ textarea {
       position: static;
       text-align: center;
       margin: 0 auto;
-      max-width: 50%; }
+      max-width: 40%; }
     .section--woundcare-for-animals .wrap:before {
       height: 527px;
       width: 312px;
@@ -1327,7 +1438,7 @@ textarea {
       position: relative;
       text-align: center;
       margin: 0 auto 3em;
-      max-width: 50%; }
+      max-width: 60%; }
       .section--woundcare-for-animals h1:after {
         content: "";
         display: inline-block;
@@ -1347,37 +1458,41 @@ textarea {
       height: 730px;
       width: 440px;
       top: -9em;
-      left: -5em; }
+      left: -8em; }
     .section--woundcare-for-animals .wrap:after {
       height: 460px;
-      width: 360px; } }
+      width: 360px;
+      right: -8em; } }
 @media screen and (min-width: 90em) {
   .section--woundcare-for-animals h1 {
     padding: 0.5em 0;
     position: relative;
     margin-bottom: 3em;
-    max-width: 50%; }
+    max-width: 60%; }
     .section--woundcare-for-animals h1:after {
       bottom: -40%; }
   .section--woundcare-for-animals .hero--subheading {
     text-align: center;
-    max-width: 45%; }
+    max-width: 60%; }
   .section--woundcare-for-animals .wrap:before {
     height: 1000px;
-    width: 600px; }
+    width: 600px;
+    left: -15em; }
   .section--woundcare-for-animals .wrap:after {
-    height: 650px;
-    width: 500px;
-    top: -2em; } }
+    height: 750px;
+    width: 600px;
+    top: 0em;
+    right: -15em; } }
 .contact {
   text-align: center; }
 
 .contact--method {
   text-align: left;
   margin-bottom: 2em; }
-  .contact--method p {
-    margin-bottom: 0.25em; }
 
+@media screen and (min-width: 45em) {
+  .contact--method .contact-method--right {
+    text-align: right; } }
 .woundcare-range--mobile {
   text-align: left;
   visibility: visible;
@@ -1400,6 +1515,8 @@ textarea {
     display: table; } }
 /* Hero Section */
 .section-hero .wrap {
+  padding-top: 3em;
+  padding-bottom: 3em;
   position: relative; }
   .section-hero .wrap:before, .section-hero .wrap:after {
     position: absolute;
@@ -1410,7 +1527,9 @@ textarea {
     background-size: contain;
     height: 100%;
     width: 100%;
-    top: -2em; }
+    top: 0; }
+.section-hero .content-left p:nth-child(2) {
+  line-height: 1.4; }
 .section-hero h1 {
   margin-top: 75%;
   margin-bottom: 0; }
@@ -1419,97 +1538,179 @@ textarea {
   .section-hero .wrap:after {
     height: 90%;
     width: 90%;
-    top: -2em;
+    top: 0;
     right: -12em; }
-  .section-hero .content-left {
-    padding-left: 2em; }
-    .section-hero .content-left h2 {
-      margin-bottom: 1em; }
-    .section-hero .content-left h3 {
-      padding-right: 3em; }
   .section-hero h1 {
     margin-top: 0; } }
 @media screen and (min-width: 72em) {
+  .section-hero .wrap {
+    padding-top: 6em;
+    padding-bottom: 6em; }
+    .section-hero .wrap:after {
+      height: 120%;
+      width: 93%;
+      top: -9em;
+      right: -19em; }
+  .section-hero .content-left p:nth-child(3) {
+    font-size: 1.5em; }
+  .section-hero .content-left .h3 {
+    padding-right: 6em; } }
+@media screen and (min-width: 90em) {
   .section-hero .wrap:after {
     height: 120%;
     width: 93%;
     top: -9em;
-    right: -19em; }
-  .section-hero .content-left {
-    padding-left: 5em; }
-    .section-hero .content-left h3 {
-      padding-right: 6em; } }
-@media screen and (min-width: 90em) {
-  .section-hero .wrap:after {
-    height: 130%;
-    width: 93%;
-    top: -9em;
-    right: -28em; } }
-.suprasorb-hero {
-  position: relative;
-  background: url(/assets/img/suprasorb/Suprasorb-A+Ag.png) no-repeat center top;
-  background-size: 90%; }
-  .suprasorb-hero .suprasorb-content {
-    padding-top: 80%; }
+    right: -19em; } }
+.img--round {
+  border-radius: 50%;
+  margin-bottom: 1em; }
 
-@media screen and (min-width: 72em) {
-  .suprasorb-hero {
-    background: url(/assets/img/suprasorb/Suprasorb-A+Ag.png) no-repeat center right;
-    background-position: 115% 45%; }
-    .suprasorb-hero .suprasorb-content {
-      padding-top: 10%; } }
-@media screen and (min-width: 90em) {
-  .suprasorb-hero {
-    background: url(/assets/img/suprasorb/Suprasorb-A+Ag.png) no-repeat center right;
-    background-position: 110% 45%;
-    background-size: 40%; } }
-.suprasorb-slider {
-  text-align: center;
-  height: 800px; }
-  .suprasorb-slider h2 {
-    padding: 1.5em 0 0.5em; }
-
-.actiform-hero {
-  position: relative;
-  background: url(/assets/img/actiformcool/actiformcool.png) no-repeat center top;
-  background-size: 90%; }
-  .actiform-hero .actiform-content {
-    padding-top: 90%; }
-
-@media screen and (min-width: 72em) {
-  .actiform-hero {
-    background-position: 115% 0%;
-    background-size: 56%; }
-    .actiform-hero .actiform-content {
-      padding-top: 10%; } }
-@media screen and (min-width: 90em) {
-  .actiform-hero {
-    background-position: 110% 45%;
-    background-size: 37%; } }
-.actiform-slider {
-  text-align: center;
-  height: 800px;
-  margin: 0 auto;
-  padding: 2em; }
+/* Section two */
+.section-debrisoft--cloth .wrap {
+  z-index: 2; }
+  .section-debrisoft--cloth .wrap:before, .section-debrisoft--cloth .wrap:after {
+    position: absolute;
+    content: ''; }
+  .section-debrisoft--cloth .wrap:after {
+    background: url(/assets/img/debrisoft/section-two-debrisoft-hand.png) no-repeat top left;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    top: -1.5em;
+    left: -1.5em; }
+.section-debrisoft--cloth h2 {
+  margin-top: 75%; }
 
 @media screen and (min-width: 45em) {
-  .actiform-slider {
-    padding: 3em 8em; } }
+  .section-debrisoft--cloth {
+    padding-bottom: 0; }
+    .section-debrisoft--cloth .wrap:after {
+      height: 70%;
+      width: 70%;
+      top: -3em;
+      left: -3em; }
+    .section-debrisoft--cloth h2 {
+      margin-top: 0; } }
 @media screen and (min-width: 72em) {
-  .actiform-slider {
-    padding: 3em 4em; } }
+  .section-debrisoft--cloth .wrap:after {
+    height: 100%;
+    width: 100%;
+    top: -4.5em;
+    left: -4.5em; }
+  .section-debrisoft--cloth h2 {
+    margin-top: 0; } }
 @media screen and (min-width: 90em) {
-  .actiform-slider {
-    padding: 3em 14em; }
-    .actiform-slider h2 {
-      padding: 1.5em 1em 0.5em; } }
-/*
-	.actiform-slider--content {
-		padding: 0 10em;
-		margin-bottom: 4em;
-		
-	}
-*/
+  .section-debrisoft--cloth .wrap:after {
+    height: 120%;
+    width: 120%;
+    top: -6em;
+    left: -6em; }
+  .section-debrisoft--cloth h2 {
+    margin-top: 0; } }
+/* Section Three */
+@media screen and (min-width: 45em) {
+  .section-debrisoft--equine {
+    padding-top: 0; }
+    .section-debrisoft--equine .wrap {
+      padding-top: 3em;
+      padding-bottom: 3em;
+      position: relative; }
+      .section-debrisoft--equine .wrap:before, .section-debrisoft--equine .wrap:after {
+        position: absolute;
+        content: ''; }
+      .section-debrisoft--equine .wrap:after {
+        background: url(/assets/img/debrisoft/brown-horse.jpg) no-repeat center top;
+        background-size: contain;
+        height: 100%;
+        width: 100%;
+        bottom: 0;
+        right: -15em; } }
+@media screen and (min-width: 72em) {
+  .section-debrisoft--equine .wrap:after {
+    height: 120%;
+    width: 120%;
+    bottom: -9em;
+    right: -20em; } }
+@media screen and (min-width: 90em) {
+  .section-debrisoft--equine .wrap:after {
+    height: 150%;
+    width: 150%;
+    bottom: -20em;
+    right: -40em; } }
+/* Section Four */
+@media screen and (min-width: 45em) {
+  .section-debrisoft--canine {
+    padding-top: 0; }
+    .section-debrisoft--canine .wrap {
+      padding-top: 3em;
+      padding-bottom: 3em;
+      position: relative; }
+      .section-debrisoft--canine .wrap:before, .section-debrisoft--canine .wrap:after {
+        position: absolute;
+        content: ''; }
+      .section-debrisoft--canine .wrap:after {
+        background: url(/assets/img/debrisoft/black-dog--debrisoft.jpg) no-repeat center top;
+        background-size: contain;
+        height: 100%;
+        width: 100%;
+        bottom: 0;
+        left: -15em; } }
+@media screen and (min-width: 72em) {
+  .section-debrisoft--canine .wrap:after {
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: -20em; } }
+@media screen and (min-width: 90em) {
+  .section-debrisoft--canine .wrap:after {
+    height: 120%;
+    width: 120%;
+    bottom: -5em;
+    left: -30em; } }
+.section-suprasorb .wrap {
+  position: relative; }
+  .section-suprasorb .wrap:before, .section-suprasorb .wrap:after {
+    position: absolute;
+    content: ''; }
+  .section-suprasorb .wrap:after {
+    background: url(/assets/img/suprasorb/Suprasorb-A+Ag.png) no-repeat center top;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    top: 0; }
+.section-suprasorb h1 {
+  margin-top: 95%; }
+
+@media screen and (min-width: 72em) {
+  .section-suprasorb .wrap:after {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: -20em; }
+  .section-suprasorb .wrap h1 {
+    margin-top: 0; } }
+.section-actiformcool .wrap {
+  position: relative; }
+  .section-actiformcool .wrap:before, .section-actiformcool .wrap:after {
+    position: absolute;
+    content: ''; }
+  .section-actiformcool .wrap:after {
+    background: url(/assets/img/actiformcool/actiformcool.png) no-repeat center top;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    top: 0; }
+.section-actiformcool h1 {
+  margin-top: 95%; }
+
+@media screen and (min-width: 72em) {
+  .section-actiformcool .wrap:after {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: -20em; }
+  .section-actiformcool .wrap h1 {
+    margin-top: 0; } }
 .order-codes {
   text-align: center; }
   .order-codes h2 {
@@ -1522,12 +1723,14 @@ textarea {
 
 @media screen and (min-width: 45em) {
   .order-codes--desk {
-    display: inline-table; } }
+    display: inline-table;
+    font-size: 1.5em; } }
 .order-codes--mobile {
   display: block;
   text-align: left;
   border-top: 1px solid #4D4D4D;
-  border-bottom: 1px solid #4D4D4D; }
+  border-bottom: 1px solid #4D4D4D;
+  margin-bottom: 3em; }
   .order-codes--mobile p:nth-of-type(4) {
     margin-bottom: 0; }
 
@@ -1543,19 +1746,20 @@ textarea {
     margin-bottom: 2em; }
   .where-to-order .order--info {
     text-align: center;
-    padding: 1.5em; }
+    padding: 1.5em 1.5em 0 1.5em; }
     .where-to-order .order--info .h4 {
       font-weight: 600;
       margin-bottom: 0.25em; }
-    .where-to-order .order--info h4 {
-      margin-bottom: 0; }
     .where-to-order .order--info a {
       text-decoration: underline; }
-  @media screen and (min-width: 72em) {
+  @media screen and (min-width: 45em) {
     .where-to-order .order--info {
       text-align: left; }
     .where-to-order .order--info:nth-of-type(-n+3) {
       border-right: 1px solid #4D4D4D; } }
+
+.order-information {
+  margin-bottom: 5em; }
 
 .product-summary .graph-mobile {
   display: inline-block;
@@ -1567,9 +1771,6 @@ textarea {
     display: none; }
   .product-summary .graph-desk {
     display: inline-block; } }
-
-.clinicians p {
-  margin-bottom: 0.125em; }
 
 /*------------------------------------*\
     #CLEARFIX

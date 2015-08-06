@@ -3,7 +3,7 @@ input {
 	background-color: transparent;
 	border: 1px solid $light-grey;
 	color: $light-grey;
-	margin-bottom: 0.5em;
+	margin-bottom: 1em;
 	width: 100%;
 	&::-webkit-input-placeholder {
 	  color: $light-grey;
@@ -38,4 +38,25 @@ textarea {
 	input {
 		display: inline-block;
 	}
+}
+
+input[type="checkbox"] + label span {
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-top: -5px;
+    width: 32px;
+    height: 32px;
+    border: solid 1px $lightest-grey;
+    @include prefixed(border-radius,0.25em);
+    margin-right: 0.75em;
+}
+
+input[type="checkbox"]:checked + label span {
+    background: url(/assets/img/checked.png) no-repeat center center;
+    background-size: 1em;
+}
+
+.checkbox-contact {
+	@include visuallyhidden;
 }

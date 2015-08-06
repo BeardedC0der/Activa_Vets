@@ -24,10 +24,11 @@ function tabs() {
     
     $( '.tab' ).click( function() {
         var $tabclicked = $( this );
+        var $tabsection = $tabclicked.closest('section');
             
         //clean up
-        $( '.tab__content' ).hide();
-        $( '.tab' ).removeClass( 'tab--active' );
+       $tabsection.find('.tab__content' ).hide();
+       $tabsection.find( '.tab' ).removeClass( 'tab--active' );
             
         //show new tab
         $tabclicked.addClass( 'tab--active' );
@@ -40,7 +41,14 @@ function tabs() {
     $( '.tab__content' ).hide();
         
     //click the first tab
-    $('.tab').first().click();
+    //$('.tab').first().click();
+    
+
+	$(".wrap--tabs").each(function() {
+        //$(this).css('background','red');
+        //$(this).find('.tab').first().css('background','red');
+        $(this).find('.tab').first().click();
+    });
     
 }
 

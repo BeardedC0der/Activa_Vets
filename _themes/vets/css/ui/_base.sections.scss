@@ -1,3 +1,23 @@
+.section {
+	padding: 1.5em 0;
+}
+
+@include media-query(tablet-and-up) {
+	.section {
+		padding: 3em 0;
+	}
+}
+@include media-query(lap-and-up) {
+	.section {
+		padding: 4.5em 0;
+	}
+}
+@include media-query(desk) {
+	.section {
+		padding: 6em 0;
+	}
+}
+
 .section--grey {
 	background-color: $dark-grey;
 }
@@ -18,7 +38,7 @@
 .section--products {
 	border-top: 1px solid $light-grey;
 	position: relative;
-	z-index: 10000;
+	z-index: 10;
 }
 
 

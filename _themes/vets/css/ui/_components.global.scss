@@ -12,10 +12,24 @@ body {
 // Wraps
 
 .wrap {
-	max-width: 100em;
+	width: 100%;
 	margin: 0 auto;
 	padding: 1.5em;
 }
+
+@include media-query(lap-and-up) {
+	.wrap {
+		padding: 0;
+		max-width: 64em;
+	}
+}
+
+@include media-query(desk) {
+	.wrap {
+		max-width: 80em;
+	}
+}
+
 .wrap--pseudo-img {
 	position: relative;
 	z-index: 1;
@@ -43,4 +57,16 @@ body {
 
 .t-center {
 	text-align: center;
+}
+
+@include media-query(tablet-and-up) {
+	.t-right--tablet {
+		text-align: right;
+	}
+}
+
+@include media-query(mobile) {
+	.t-center--mobile {
+		text-align: center;
+	}
 }

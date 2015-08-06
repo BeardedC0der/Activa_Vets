@@ -13,6 +13,7 @@ body {
 	margin-bottom: 0;
 }
 
+
 a {
 	color: white;
 	text-decoration: none;
@@ -25,15 +26,34 @@ a {
 //	}
 //}
 
-//@include media-query(desk) {
-//	body {
-//		font-size: 1.25rem;
-//	}
-//}
+/*
+@include media-query(desk) {
+	body {
+		font-size: 1.5rem;
+	}
+}
+*/
+
+.small {
+	font-size: 1rem;
+}
+
+.medium {
+	font-size: 1.125rem;
+}
 
 .text-featured {
-	font-size: 1.25rem;
+	font-size: 1rem;
+	margin-bottom: 1em;
 }
+
+@include media-query(lap-and-up) {
+	.text-featured {
+		font-size: 1.25rem;
+		margin-bottom: 1em;
+	}
+}
+
 
 .text-reversed {
 	color: $lightest-grey;
@@ -46,6 +66,11 @@ a {
 	}
 }
 
+@include media-query(desk) {
+	p {
+		font-size: 1.5em;
+	}
+}
 
 
 // Responsive headings
@@ -87,6 +112,34 @@ h1,.h1 {
 	}
 }
 
+// Inbetween h1 & h2 used on product pages
+.product-heading {
+	font-size: 1.375rem;
+}
+
+@include media-query(phablet) {
+	.product-heading {
+		font-size: rem;
+	}
+}
+
+@include media-query(tablet) {
+	.product-heading {
+		font-size: rem;
+	}
+}
+
+@include media-query(lap) {
+	.product-heading {
+		font-size: rem;
+	}
+}
+
+@include media-query(desk) {
+	.product-heading {
+		font-size: 3.125rem;
+	}
+}
 
 /* h2,.h2 */
 
@@ -102,7 +155,7 @@ h2,.h2 {
 
 @include media-query(tablet) {
 	h2,.h2 {
-		font-size: 2.5em;
+		font-size: 2.375em;
 	}
 }
 
@@ -133,19 +186,19 @@ h3,.h3 {
 
 @include media-query(tablet) {
 	h3,.h3 {
-		font-size: 1.375rem;
+		font-size: 2.25rem;
 	}	
 }
 
 @include media-query(lap) {
 	h3,.h3 {
-		font-size: 1.875rem;
+		font-size: 2.5rem;
 	}	
 }
 
 @include media-query(desk) {
 	h3,.h3 {
-		font-size: 1.875rem;
+		font-size: 2.625rem;
 	}	
 }
 
@@ -153,7 +206,7 @@ h3,.h3 {
 /* h4,.h4 */
 
 h4,.h4 {
-	font-size: 1rem;
+	font-size: 1.375rem;
 }
 
 @include media-query(phablet) {
@@ -176,6 +229,6 @@ h4,.h4 {
 
 @include media-query(desk) {
 	h4,.h4 {
-		font-size: 1.5rem;
+		font-size: 2.125rem;
 	}
 }

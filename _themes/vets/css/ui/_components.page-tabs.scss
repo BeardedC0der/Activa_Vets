@@ -1,13 +1,31 @@
 // Tabs
 
+@include media-query(mobile) {
+	.section--products {
+		padding-bottom: 0;
+		padding-top: 3em;
+	}
+}
 
 .wrap--tabs {
 	padding: 0;
-	margin-top: -3em;
+	margin-top: -6em;
 	margin-bottom: 3em;
 	max-width: 70em;
 	position: relative;
-	z-index: 10000;
+	z-index: 10;
+}
+
+@include media-query(lap-and-up) {
+	.wrap--tabs {
+		margin-top: -7.5em;
+	}
+}
+
+@include media-query(desk) {
+	.wrap--tabs {
+		margin-top: -9em;
+	}
 }
 
 .tab,
@@ -37,6 +55,15 @@
 @include media-query(tablet-and-up) {
 	.tab-blocks {
 		
+	}
+	
+	.tab-blocks--light {
+		.tab {
+			&.tab--active {
+				background-color: $dark-grey;
+				border-bottom: 1px solid $dark-grey;
+			}
+		}
 	}
 	.tab {
 		border-width: 0;

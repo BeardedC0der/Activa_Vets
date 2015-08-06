@@ -5,7 +5,12 @@
 .contact--method {
 	text-align: left;
 	margin-bottom: 2em;
-	p {
-		margin-bottom: 0.25em;
+}
+
+@include media-query(tablet-and-up) {
+	.contact--method {
+		.contact-method--right {
+			text-align: right;
+		}
 	}
 }
