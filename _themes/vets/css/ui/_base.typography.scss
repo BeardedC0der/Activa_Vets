@@ -36,6 +36,7 @@ a {
 
 .small {
 	font-size: 1rem;
+	margin-bottom: 0;
 }
 
 .medium {
@@ -102,7 +103,7 @@ h1,.h1 {
 
 @include media-query(lap) {
 	h1,.h1 {
-		font-size: 3.5rem;
+		font-size: 3rem;
 	}	
 }
 
@@ -155,13 +156,13 @@ h2,.h2 {
 
 @include media-query(tablet) {
 	h2,.h2 {
-		font-size: 2.375em;
+		font-size: 1.75em;
 	}
 }
 
 @include media-query(lap) {
 	h2,.h2 {
-		font-size: 2.5rem;
+		font-size: 2rem;
 	}
 }
 

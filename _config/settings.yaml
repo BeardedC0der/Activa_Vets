@@ -36,7 +36,7 @@ _theme: vets
 _entry_timestamps: false
 
 # Global formatting for {{ date }} variables
-_date_format: 'F jS, Y'
+_date_format: 'd M, Y'
 
 # Global formatting for time variables
 _time_format: 'g:ia'
@@ -48,6 +48,7 @@ _timezone: Europe/London
 _taxonomy:
   - categories
   - tags
+  - event_date
 
 # Turns your slugs into pretty urls (spaces become "-" instead of %20)
 _taxonomy_slugify: false

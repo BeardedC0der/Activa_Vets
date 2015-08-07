@@ -602,7 +602,8 @@ a {
 }
 */
 .small {
-  font-size: 1rem; }
+  font-size: 1rem;
+  margin-bottom: 0; }
 
 .medium {
   font-size: 1.125rem; }
@@ -642,7 +643,7 @@ h1, .h1 {
     font-size: 2.5rem; } }
 @media screen and (min-width: 72em) and (max-width: 89.9375em) {
   h1, .h1 {
-    font-size: 3.5rem; } }
+    font-size: 3rem; } }
 @media screen and (min-width: 90em) {
   h1, .h1 {
     font-size: 4.5rem; } }
@@ -670,10 +671,10 @@ h2, .h2, .section-hero .content-left p:first-child {
     font-size: 2rem; } }
 @media screen and (min-width: 45em) and (max-width: 71.9375em) {
   h2, .h2, .section-hero .content-left p:first-child {
-    font-size: 2.375em; } }
+    font-size: 1.75em; } }
 @media screen and (min-width: 72em) and (max-width: 89.9375em) {
   h2, .h2, .section-hero .content-left p:first-child {
-    font-size: 2.5rem; } }
+    font-size: 2rem; } }
 @media screen and (min-width: 90em) {
   h2, .h2, .section-hero .content-left p:first-child {
     font-size: 2.875rem; } }
@@ -799,6 +800,45 @@ h4, .h4 {
 @media screen and (min-width: 120em) {
   .section--horses-paddock {
     padding-bottom: 70em; } }
+.caption {
+  text-align: center; }
+
+.slide {
+  width: 100%; }
+  .slide img {
+    margin-bottom: 2em; }
+
+.slider {
+  list-style: none; }
+
+.flickity-prev-next-button {
+  width: 44px;
+  height: 44px;
+  top: 40%; }
+
+.flickity-prev-next-button.previous {
+  left: -1rem; }
+
+.flickity-prev-next-button.next {
+  right: -1rem; }
+
+@media screen and (min-width: 45em) {
+  .flickity-prev-next-button {
+    width: 60px;
+    height: 60px;
+    top: 33%; }
+
+  .flickity-prev-next-button.previous {
+    left: -3rem; }
+
+  .flickity-prev-next-button.next {
+    right: -3rem; } }
+@media screen and (min-width: 72em) {
+  .flickity-prev-next-button.previous {
+    left: -5rem; }
+
+  .flickity-prev-next-button.next {
+    right: -5rem; } }
 /*------------------------------------*\
     #BUTTONS
 \*------------------------------------*/
@@ -1013,6 +1053,9 @@ body {
 @media screen and (max-width: 44.9375em) {
   .t-center--mobile {
     text-align: center; } }
+.media-padding {
+  padding: 2.5em 0; }
+
 .logo {
   margin: 1em;
   position: relative;
@@ -1049,9 +1092,20 @@ Page Nav
     display: inline-block;
     padding: 0.5em 1em; }
   .desktop--nav a {
-    color: white; }
+    color: white;
+    -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    -ms-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out; }
     .desktop--nav a:hover {
-      text-decoration: none; }
+      text-decoration: none;
+      color: #4D4D4D !important;
+      -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+      -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+      -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+      -ms-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out; }
 
 @media screen and (min-width: 72em) {
   .desktop--nav {
@@ -1132,7 +1186,7 @@ Page Nav
   .overlay nav {
     position: relative;
     height: 70%;
-    top: 50%;
+    top: 70%;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -1140,6 +1194,9 @@ Page Nav
     transform: translateY(-50%);
     transform: translateY(-50%);
     text-align: center; }
+  @media screen and (min-width: 90em) {
+    .overlay .nav {
+      top: 50%; } }
   .overlay ul {
     list-style: none;
     padding: 0;
@@ -1257,8 +1314,7 @@ table {
   table tr {
     border-bottom: 1px solid #4D4D4D; }
   table td {
-    padding: 1.5em 0px;
-    font-size: 0.75em; }
+    padding: 1.5em 0px; }
     table td span {
       display: block;
       width: 10px;
@@ -1364,8 +1420,7 @@ input[type="checkbox"]:checked + label span, textarea[type="checkbox"]:checked +
     margin-bottom: 3em; }
   .section--woundcare-for-animals .hero--subheading {
     text-align: right;
-    margin-left: 40%;
-    margin-bottom: 3em; }
+    margin-left: 40%; }
   .section--woundcare-for-animals .wrap {
     position: relative; }
     .section--woundcare-for-animals .wrap:before, .section--woundcare-for-animals .wrap:after {
@@ -1389,7 +1444,7 @@ input[type="checkbox"]:checked + label span, textarea[type="checkbox"]:checked +
 
 @media screen and (min-width: 25em) {
   .section--woundcare-for-animals h1 {
-    margin-right: 50%;
+    margin-right: 30%;
     margin-bottom: 4em; }
   .section--woundcare-for-animals .hero--subheading {
     margin-left: 45%;
@@ -1398,8 +1453,9 @@ input[type="checkbox"]:checked + label span, textarea[type="checkbox"]:checked +
     height: 425px;
     width: 200px; }
   .section--woundcare-for-animals .wrap:after {
-    height: 315px;
-    width: 225px; } }
+    height: 415px;
+    width: 270px;
+    right: -2em; } }
 @media screen and (min-width: 45em) {
   .section--woundcare-for-animals {
     margin-bottom: 5em; }
@@ -1407,7 +1463,7 @@ input[type="checkbox"]:checked + label span, textarea[type="checkbox"]:checked +
       position: relative;
       text-align: center;
       margin: 0 auto 3em;
-      max-width: 50%; }
+      max-width: 60%; }
       .section--woundcare-for-animals h1:after {
         content: "";
         display: inline-block;
@@ -1417,12 +1473,12 @@ input[type="checkbox"]:checked + label span, textarea[type="checkbox"]:checked +
         margin-left: -25px;
         background: url(/assets/img/down.png) no-repeat;
         position: absolute;
-        bottom: -50%; }
+        bottom: -80%; }
     .section--woundcare-for-animals .hero--subheading {
       position: static;
       text-align: center;
       margin: 0 auto;
-      max-width: 40%; }
+      max-width: 60%; }
     .section--woundcare-for-animals .wrap:before {
       height: 527px;
       width: 312px;
@@ -1453,12 +1509,12 @@ input[type="checkbox"]:checked + label span, textarea[type="checkbox"]:checked +
       position: static;
       text-align: center;
       margin: 0 auto;
-      max-width: 60%; }
+      max-width: 50%; }
     .section--woundcare-for-animals .wrap:before {
       height: 730px;
       width: 440px;
       top: -9em;
-      left: -8em; }
+      left: -10em; }
     .section--woundcare-for-animals .wrap:after {
       height: 460px;
       width: 360px;
@@ -1745,8 +1801,7 @@ input[type="checkbox"]:checked + label span, textarea[type="checkbox"]:checked +
     color: #808080;
     margin-bottom: 2em; }
   .where-to-order .order--info {
-    text-align: center;
-    padding: 1.5em 1.5em 0 1.5em; }
+    text-align: center; }
     .where-to-order .order--info .h4 {
       font-weight: 600;
       margin-bottom: 0.25em; }
@@ -1759,8 +1814,11 @@ input[type="checkbox"]:checked + label span, textarea[type="checkbox"]:checked +
       border-right: 1px solid #4D4D4D; } }
 
 .order-information {
-  margin-bottom: 5em; }
+  margin-bottom: 2em; }
 
+@media screen and (min-width: 72em) {
+  .order-information {
+    margin-bottom: 5em; } }
 .product-summary .graph-mobile {
   display: inline-block;
   margin-bottom: 1em; }

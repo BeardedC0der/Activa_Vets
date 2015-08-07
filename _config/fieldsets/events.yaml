@@ -1,6 +1,13 @@
 title: Events
 
 fields:
+  category:
+    display: Category
+    type: suggest
+    create: true
+    taxonomy:
+      folder: events
+      type: category
 
   event_date:
     display: Event date

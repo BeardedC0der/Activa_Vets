@@ -1,0 +1,57 @@
+.caption {
+  text-align: center;
+}
+
+.slide {
+	width: 100%;
+	
+	img {
+		margin-bottom: 2em;
+	}
+}
+
+.slider {
+	list-style: none;
+}
+
+// Adjust the stock flickity prev/next buttons
+
+.flickity-prev-next-button {
+    width: 44px;
+    height: 44px;
+    top: 40%;
+}
+
+.flickity-prev-next-button.previous {
+    left: -1rem;
+}
+
+.flickity-prev-next-button.next {
+    right: -1rem;
+}
+
+@include media-query(tablet-and-up) {
+    .flickity-prev-next-button {
+        width: 60px;
+        height: 60px;
+        top: 33%;
+    }
+    
+    .flickity-prev-next-button.previous {
+        left: -3rem;
+    }
+    
+    .flickity-prev-next-button.next {
+        right: -3rem;
+    }
+}
+
+@include media-query(lap-and-up) {
+    .flickity-prev-next-button.previous {
+        left: -5rem;
+    }
+    
+    .flickity-prev-next-button.next {
+        right: -5rem;
+    }
+}

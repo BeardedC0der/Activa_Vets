@@ -3,8 +3,21 @@ $(document).ready(function () {
 	closeNav();
 	tabs();
 	accordionToggle();
+	
+	$('.slider').flickity({
+      // options
+      arrowShape: 'M 0,50 L 60,00 L 50,30 L 80,30 L 80,70 L 50,70 L 60,100 Z',
+      cellAlign: "center", 
+      contain: true, 
+      wrapAround: true, 
+      freeScroll: false, 
+      autoPlay: 5000,
+      initialIndex: 0
+   	});
 });
-function navToggle(){
+
+
+function navToggle() {
 	$('#toggle').click(function() {
 	   $(this).toggleClass('active');
 	   $('body').toggleClass('active');

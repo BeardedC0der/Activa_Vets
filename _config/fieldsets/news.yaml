@@ -1,0 +1,10 @@
+title: News
+
+fields:
+
+  news_date:
+    display: News date
+    type: date
+
+  content:
+    type: textarea

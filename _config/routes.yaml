@@ -10,6 +10,7 @@ routes:
 	/products/flivasorb: flivasorb
 	/products/suprasorb: suprasorb
 	/products/actiformcool: actiformcool
+	/events: events
 
 ignore:
   # - success

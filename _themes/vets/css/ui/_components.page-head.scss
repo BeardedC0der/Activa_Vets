@@ -44,11 +44,11 @@ Page Nav
 	}
 	a {
 		color: white;
-//		@include color-transition;
+		@include color-transition;
 		&:hover {
 			text-decoration: none;
-//			color: $orange !important;
-//			@include color-transition;
+			color: $light-grey !important;
+			@include color-transition;
 		}
 	}
 }
@@ -121,6 +121,7 @@ Page Nav
 	}
 }
 
+
 .overlay {
   position: fixed;
   background-color: black;
@@ -154,11 +155,15 @@ Page Nav
   nav {
     position: relative;
     height: 70%;
-    top: 50%;
+    top: 70%;
     @include prefixed(transform, translateY(-50%));
     transform: translateY(-50%);
     text-align: center;
-
+  }
+  @include media-query(desk) {
+	.nav {
+		top: 50%;
+	}
   }
   ul {
     list-style: none;
@@ -189,6 +194,8 @@ Page Nav
     }
   }
 }
+
+
 
 body {
 	&.active {
