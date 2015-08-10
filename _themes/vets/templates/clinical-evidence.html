@@ -1,35 +1,51 @@
-<section class="black">
+<section class="section">
 	<div class="wrap">
-		<div class="layout">
+		<div class="layout  layout--center">
 			<div class="layout__item">
 				<div class="t-center  u-mb++-desk">
-					<h1>Clinical evidence</h1>
+					<h1>Clinical evidence for Debrisoft</h1>
+<!--
 					<nav class="">
 						<select> 
 							<option value="/clinical-evidence/">All</option>
-							{{ taxonomy:listing folder="" type="" }}
-							<option value="{{ url }}">{{ name }}</option>
+							{{ taxonomy:listing folder="/clinical-evidence" type="products" }}
+								<option value="{{ url }}">{{ name }}</option>
 							{{ /taxonomy:listing }}
 						</select>
+-->
 					</nav>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-<section>
+<section class="section  section--gradient">
 	<div class="wrap">
-		<div class="layout">
-			<div class="layout__item">
-				<div class="rule">
-					{{ entries:listing folder="evidence" }}
-						<h2>{{ title }}</h2>
-						{{ content }}
-						<strong>Author:</strong> {{ author }} {{ value }}{{ /author }}<br>
-						<strong>Type:</strong> {{ type_of_evidence }} {{ value }}{{ /type_of_evidence }}<br>
-						<strong>Date:</strong> {{ publish_date }}
-					{{ /entries:listing }}
+		<div class="layout  layout--center">
+			<div class="layout__item  u-2/3-tablet-and-up">
+				{{ entries:listing conditions="{products}" }}
+				<div class="media-padding">
+					<div>
+						<h3>{{ title }}</h3>
+						<p>{{ keypoints }}</p>
+						<p>
+							<strong>Author:</strong> {{ author }}<br>
+							<strong>Publication:</strong> {{ publication }}<br>
+							<strong>Date:</strong> {{ date }}
+						</p>
+						{{ if document_url }}
+						
+						<p><a href="{{ url }}" title="Download {{ title }}" target="_blank">Download</a></p>
+						
+						{{ else }}
+						
+						<p><a href="{{ document }}" title="Download {{ title }}" target="_blank">Download</a></p>
+						
+						{{ /if }}
+					</div>
 				</div>
+				<hr>
+				{{ /entries:listing }}
 			</div>
 		</div>
 	</div>

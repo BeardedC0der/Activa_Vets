@@ -46,9 +46,7 @@ _timezone: Europe/London
 
 # List of desired taxonomy triggers
 _taxonomy:
-  - categories
-  - tags
-  - event_date
+  - products
 
 # Turns your slugs into pretty urls (spaces become "-" instead of %20)
 _taxonomy_slugify: false
@@ -123,7 +121,7 @@ _environments:
     - '*.com'
 
 # Set to 'true' if you want to log system messages
-_log_enabled: false
+_log_enabled: true
 
 # What's the least-serious level of message you wish to record to the log?
 # Your available options:
@@ -174,6 +172,7 @@ _admin_nav:
   help:      true
   view_site: true
   logout:    true
+  raven:     true
 
 # When you log in, where would you like to start?
 _admin_start_page: pages

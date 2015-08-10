@@ -1,3 +1,12 @@
-type: number
-_fieldset: events
-_entries_label: Events
+type: date
+title: Events
+
+fields:
+
+  venue:
+    type: text
+    
+  document:
+    type: file
+    destination: downloads/events/
+    allowed: ['pdf','doc','docx','ppt','pptx']

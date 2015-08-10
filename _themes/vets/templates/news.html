@@ -5,10 +5,12 @@
 				<div class="t-center">
 					<h1>Events</h1>
 					<select> 
-						<option value="/events/">All</option>
-						{{ taxonomy:listing folder="news" type="news_date" }}
-						<option value="{{ url }}">{{ name }}</option>
-						{{ /taxonomy:listing }}
+						<option value="/events/">Month</option>
+						{{ entries:listing group_by_date="F Y" sort_by="date" sort_dir="asc" }}
+		                    {{ if grouped_date }}
+		                        <option value="{{ grouped_date }}">{{ grouped_date }}</option>
+		                    {{ endif }}
+		                {{ /entries:listing }}
 					</select>
 				</div>
 			</div>
@@ -19,16 +21,15 @@
 	<div class="wrap">
 		<div class="layout  layout--center">
 			<div class="layout__item  u-3/4-tablet-and-up">
-				{{ entries:listing folder="news" }}
+				{{ entries:listing sort_by="date" sort_dir="asc" }}
 				<div class="media-padding">
 					<div class="layout">
 						<div class="layout__item  u-1/3-lap-and-up">
-							<p class="h3">{{ news_date }}</p>
+							<p class="h3">{{ date format="d F Y" }}</p>
 						</div>
 						<div class="layout__item  u-2/3-lap-and-up">
 							<h3>{{ title }}</h3>
 							<p>{{ content }}</p>
-							<p><strong>Venue:</strong> {{ venue:name }}</p>
 						</div>
 					</div>
 				</div>

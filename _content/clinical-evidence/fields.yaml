@@ -1,0 +1,43 @@
+type: date
+title: Clinical evidence
+
+fields:
+  keypoints:
+    display: Key points
+    type: text
+  author:
+    type: text
+  source:
+    type: select
+    options:
+      - Activa publication
+      - Audit or Health Economics
+      - Conference poster
+      - Journal
+      - Other
+      - Video
+  publication:
+    type: text
+#   pubdate:
+#     display: Publication date
+#     type: date
+  conditions:
+    type: suggest
+    create: true
+    taxonomy:
+      folder: clinical-evidence
+      type: conditions
+  products:
+    type: suggest
+    create: true
+    taxonomy:
+      folder: clinical-evidence
+      type: products
+  video:
+    type: text
+  document_url:
+    type: text
+  document:
+    type: file
+    destination: downloads/clinical-evidence/
+    allowed: ['pdf','doc','docx','ppt','pptx']    

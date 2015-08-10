@@ -311,7 +311,7 @@
 				<div class="about-intro">
 					<h3>Activa Healthcare are one of the UK's fastest growing companies in the human medical sector.</h3>
 					<p>Trusted and used throughout the NHS, our products have won awards for innovation and Debrisoft has been recommended by NICE for wounds needing debridement. Activa is part of the multi-national wound care company Lohmann and Rauscher.</p>
-					<a class="btn--reversed  medium">Read our Debrisoft NICE recommendation</a>
+					<a class="btn--reversed  medium" href="#">Read our Debrisoft NICE recommendation</a>
 				</div>
 			</div>
 		</div>
@@ -430,51 +430,68 @@
 			</div>
 		</div>
 		
-		<div class="layout  layout--center">
-			<div class="layout__item  u-2/3-tablet-and-up  u-3/4-desk">
-				<div class="layout">
-					<div class="layout__item  u-1/2-tablet-and-up">
-						<label for="first-name" class="visuallyhidden">First name</label>
-						<input type="text" id="first-name" class="" name="first-name" placeholder="First name (required)">
-					</div>
-					<div class="layout__item  u-1/2-tablet-and-up">
-						<label for="surname" class="visuallyhidden">Surname</label>
-						<input type="text" id="surname" class="" name="surname" placeholder="Surname (required)">
-					</div>
-				</div>
-					
-				<div class="layout">
-					<div class="layout__item  u-1/2-tablet-and-up">
-						<label for="phone" class="visuallyhidden">Telephone</label>
-						<input type="text" id="phone" class="" name="phone" placeholder="Telephone">
-					</div>
-					<div class="layout__item  u-1/2-tablet-and-up">
-						<label for="email" class="visuallyhidden">Email</label>
-						<input type="text" id="email" class="" name="email" placeholder="Email (required)">
-					</div>
-				</div>
-				<div class="layout">
-					<div class="layout__item">
-						<label for="message" class="visuallyhidden">Your enquiry</label>
-						<textarea id="message" class="" name="message" placeholder="Your enquiry (required)"></textarea>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="layout  layout--center">
-			<div class="layout__item  u-2/5-tablet-and-up">
-				<div class="t-center">
-					<p>We would like to keep you up to date about new products or send other information which we think you may find interesting.</p>
-					
-					<form class="u-m">
-						<input type="checkbox" id="mailings" name="mailings" class="checkbox-contact">
-						<label for="mailings"><span></span>Please keep me up to date</label>
-					</form>
+		{{ raven:errors }}
+			<ul>
+				{{ missing }}
+					<li>{{ field }} is required</li>
+				{{ /missing }}
+				{{ invalid }}
+					<li>{{ field }}: {{ message }}</li>
+				{{ /invalid }}
+			</ul>
+		{{ /raven:errors }}
+		{{ if {raven:success} }}
+		    <h3>Thank you, your message sent successfully</h3>
+		{{ endif }}
 		
-					<button class="btn--reversed">Submit</button>
+		{{ raven:form formset="contact" return="/#contact" }}
+			<div class="layout  layout--center">
+				<div class="layout__item  u-2/3-tablet-and-up  u-3/4-desk">
+					<div class="layout">
+						<div class="layout__item  u-1/2-tablet-and-up">
+							<label for="first-name" class="visuallyhidden">First name</label>
+							<input type="text" id="first-name" class="" name="first-name" placeholder="First name (required)">
+						</div>
+						<div class="layout__item  u-1/2-tablet-and-up">
+							<label for="surname" class="visuallyhidden">Surname</label>
+							<input type="text" id="surname" class="" name="surname" placeholder="Surname (required)">
+						</div>
+					</div>
+						
+					<div class="layout">
+						<div class="layout__item  u-1/2-tablet-and-up">
+							<label for="phone" class="visuallyhidden">Telephone</label>
+							<input type="text" id="phone" class="" name="phone" placeholder="Telephone">
+						</div>
+						<div class="layout__item  u-1/2-tablet-and-up">
+							<label for="email" class="visuallyhidden">Email</label>
+							<input type="text" id="email" class="" name="email" placeholder="Email (required)">
+						</div>
+					</div>
+					<div class="layout">
+						<div class="layout__item">
+							<label for="message" class="visuallyhidden">Your enquiry</label>
+							<textarea id="message" class="" name="message" placeholder="Your enquiry (required)"></textarea>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
+			<div class="layout  layout--center">
+				<div class="layout__item  u-2/5-tablet-and-up">
+					<div class="t-center">
+						<p>We would like to keep you up to date about new products or send other information which we think you may find interesting.</p>
+						
+						<form class="u-m">
+							<input type="checkbox" id="mailings" name="mailings" class="checkbox-contact">
+							<label for="mailings"><span></span>Please keep me up to date</label>
+						</form>
+						<div class="layout__item  u-mt">
+							<input class="btn--reversed" type="submit" value="Submit">
+						</div>
+					</div>
+				</div>
+			</div>
+		{{ /raven:form }}
 	</div>
 </section>
 
